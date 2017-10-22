@@ -1,0 +1,1781 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/images/iphone-icon.png">
+
+  <title>Веблайнд — рекомендации по разработке сайтов для людей с нарушениями зрения</title>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="js/inner.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Bad+Script&amp;subset=cyrillic" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="content">
+    <header>
+      <div class="wrapper cols">
+        <div class="col right">
+          <a class="open-menu-btn">
+            <span class="i-menu"></span>
+          </a>
+        </div>
+
+        <a href="/" class="logo-link">
+          <div class="col left logo logo-fixed js-logo-fixed">
+            <div class="logo-img padding-bottom-5"></div>
+          </div>
+        </a>
+
+        <a href="/" class="logo-link">
+          <div class="width-50 left col logo-text">
+            <div><strong>Веблайнд</strong></div>
+            <span class="font-light">
+              Рекомендации по&nbsp;разработке сайтов<br>
+              для людей с&nbsp;нарушениями зрения
+            </span>
+          </div>
+        </a>
+
+        <div class="clear"></div>
+
+        <div class="col link-fixed js-link-fixed xm-none">
+          <nav>
+            <ul class="menu-h">
+              <li class="level-1">
+                <span><a href="mailto:weblind@yandex.ru" class="font-light">weblind@yandex.ru</a></span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="mobile-menu-box close">
+        <a class="close-menu-btn"><span class="i-close"></span></a>
+        <div class="mobile-menu-wrap">
+
+          <div class="mobile-menu">
+            <a href="/" class="menu-logo block-inline">
+              <div><strong>Веблайнд</strong></div>
+            <span class="font-light">
+              Рекомендации по&nbsp;разработке сайтов<br/>
+              для людей с&nbsp;нарушениями зрения
+            </span>
+            </a>
+
+            <nav class="items" id="mobile-menu">
+              <ul class="menu-v">
+                <li class="level-1">
+                  <span><strong>Изображения</strong></span>
+                </li>
+                <li class="level-1"><a href="#image-content" data-id="offset-60"><span>Информативные</span></a></li>
+                <li class="level-1"><a href="#image-decoration"><span>Декоративные</span></a></li>
+                <li class="level-1"><a href="#image-graph"><span>Графики, диаграммы</span></a></li>
+                <li class="level-1"><a href="#image-group"><span>Группы</span></a></li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1">
+                  <a href="#media" data-id="offset-60"><strong>Аудио и&nbsp;видео</strong></a>
+                </li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1">
+                  <span><strong>Формы ввода</strong></span>
+                </li>
+                <li class="level-1"><a href="#form-field" data-id="offset-60"><span>Поля ввода</span></a></li>
+                <li class="level-1"><a href="#form-group"><span>Группы полей</span></a></li>
+                <li class="level-1"><a href="#form-label"><span>Инструкции</span></a></li>
+                <li class="level-1"><a href="#form-valid"><span>Уведомления</span></a></li>
+                <li class="level-1"><a href="#form-more"><span>Многостраничные формы</span></a></li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1">
+                  <a href="#table" data-id="offset-60"><strong>Таблицы</strong></a>
+                </li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1">
+                  <span><strong>Текст</strong></span>
+                </li>
+                <li class="level-1"><a href="#text-css" data-id="offset-60"><span>CSS-оформление</span></a></li>
+                <li class="level-1"><a href="#text-abbr"><span>Аббревиатуры и&nbsp;определения</span></a></li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1">
+                  <span><strong>Страница</strong></span>
+                </li>
+                <li class="level-1"><a href="#page-title" data-id="offset-60"><span><code>&lt;title&gt;</code> страницы</span></a></li>
+                <li class="level-1"><a href="#page-language"><span>Язык содержимого</span></a></li>
+                <li class="level-1"><a href="#page-block"><span>Повторяющиеся блоки</span></a></li>
+                <li class="level-1"><a href="#page-search"><span>Поиск содержимого</span></a></li>
+                <li class="level-1"><a href="#page-context"><span>Изменение контекста</span></a></li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1" data-id="offset-60">
+                  <span><strong>Верстка</strong></span>
+                </li>
+                <li class="level-1"><a href="#html-semantic" data-id="offset-60"><span>Семантика</span></a></li>
+                <li class="level-1"><a href="#html-scale"><span>Адаптивность</span></a></li>
+                <li class="level-1"><a href="#html-valid"><span>Валидность</span></a></li>
+                <li class="level-1"><a href="#html-sequence"><span>Последовательность кода</span></a></li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1">
+                  <span><strong>Навигация</strong></span>
+                </li>
+                <li class="level-1"><a href="#nav-menu" data-id="offset-60"><span>Меню</span></a></li>
+                <li class="level-1"><a href="#nav-uniformity"><span>Единообразие</span></a></li>
+                <li class="level-1"><a href="#nav-current"><span>Текущая страница</span></a></li>
+              </ul>
+
+              <ul class="menu-v">
+                <li class="level-1">
+                  <a href="#keyboard" data-id="offset-60"><strong>Управление с&nbsp;клавиатуры</strong></a>
+                </li>
+              </ul>
+
+              <ul class="menu-v padding-bottom-20">
+                <li class="level-1">
+                  <a href="#health" data-id="offset-60"><strong>Безопасность для&nbsp;здоровья</strong></a>
+                </li>
+              </ul>
+
+              <div class="right mobile-menu-link font-light">
+                <a href="mailto:weblind@yandex.ru">weblind@yandex.ru</a>
+              </div>
+              <div class="clear"></div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="table-layout cols">
+          <div>
+            <div class="sidebar width-25 col js-sidebar-fixed-container" id="sidebar">
+              <div class="sidebar-fixed js-sidebar-fixed">
+
+                <div class="sidebar-scroll">
+                  <nav class="items" id="vertical-menu">
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <span><strong>Изображения</strong></span>
+                      </li>
+                      <li class="level-1"><a href="#image-content"><span>Информативные</span></a></li>
+                      <li class="level-1"><a href="#image-decoration"><span>Декоративные</span></a></li>
+                      <li class="level-1"><a href="#image-graph"><span>Графики, диаграммы</span></a></li>
+                      <li class="level-1"><a href="#image-group"><span>Группы</span></a></li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <a href="#media"><strong>Аудио и&nbsp;видео</strong></a>
+                      </li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <span><strong>Формы ввода</strong></span>
+                      </li>
+                      <li class="level-1"><a href="#form-field"><span>Поля ввода</span></a></li>
+                      <li class="level-1"><a href="#form-group"><span>Группы полей</span></a></li>
+                      <li class="level-1"><a href="#form-label"><span>Инструкции</span></a></li>
+                      <li class="level-1"><a href="#form-valid"><span>Уведомления</span></a></li>
+                      <li class="level-1"><a href="#form-more"><span>Многостраничные формы</span></a></li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <a href="#table"><strong>Таблицы</strong></a>
+                      </li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <span><strong>Текст</strong></span>
+                      </li>
+                      <li class="level-1"><a href="#text-css"><span>CSS-оформление</span></a></li>
+                      <li class="level-1"><a href="#text-abbr"><span>Аббревиатуры и&nbsp;определения</span></a></li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <span><strong>Страница</strong></span>
+                      </li>
+                      <li class="level-1"><a href="#page-title"><span><code>&lt;title&gt;</code> страницы</span></a></li>
+                      <li class="level-1"><a href="#page-language"><span>Язык содержимого</span></a></li>
+                      <li class="level-1"><a href="#page-block"><span>Повторяющиеся блоки</span></a></li>
+                      <li class="level-1"><a href="#page-search"><span>Поиск содержимого</span></a></li>
+                      <li class="level-1"><a href="#page-context"><span>Изменение контекста</span></a></li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <span><strong>Верстка</strong></span>
+                      </li>
+                      <li class="level-1"><a href="#html-semantic"><span>Семантика</span></a></li>
+                      <li class="level-1"><a href="#html-scale"><span>Адаптивность</span></a></li>
+                      <li class="level-1"><a href="#html-valid"><span>Валидность</span></a></li>
+                      <li class="level-1"><a href="#html-sequence"><span>Последовательность кода</span></a></li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <span><strong>Навигация</strong></span>
+                      </li>
+                      <li class="level-1"><a href="#nav-menu"><span>Меню</span></a></li>
+                      <li class="level-1"><a href="#nav-uniformity"><span>Единообразие</span></a></li>
+                      <li class="level-1"><a href="#nav-current"><span>Текущая страница</span></a></li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <a href="#keyboard"><strong>Управление с&nbsp;клавиатуры</strong></a>
+                      </li>
+                    </ul>
+
+                    <ul class="menu-v">
+                      <li class="level-1">
+                        <a href="#health"><strong>Безопасность для&nbsp;здоровья</strong></a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="content-box width-65 col items">
+              <main class="main-text">
+                <div>
+                  <!-- Изображения -->
+                  <div class="parent-box" id="parent-image">
+
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Изображения
+                    </div>
+
+                    <div id="image-content">
+                      <h2 class="none-margin-top xm-none">Изображения</h2>
+
+                      <p class="intro-text">
+                        Добавьте альтернативное описание, чтобы помочь слепым и&nbsp;слабовидящим пользователям понять, что изображено на&nbsp;картинке.
+                        Описание зависит от&nbsp;типа изображения&nbsp;&mdash; информативое, график
+                        или&nbsp;диаграмма, декоративное и&nbsp;группа изображений.
+                      </p>
+
+                      <div>
+                        <div>
+                          <h3>Информативные</h3>
+                          <p>
+                            Информативные изображения передают краткую информацию к тексту, дополняют или обозначают его.
+                            Добавьте информацию в&nbsp;атрибут <code>alt</code>.
+                          </p>
+                        </div>
+
+                        <!-- Изображение передает краткую информацию -->
+                        <div>
+                          <h4>Изображение передает краткую информацию</h4>
+                          <p>
+                            Например, как открыть бутылку с&nbsp;помощью штопора с&nbsp;рычагами:
+                          </p>
+
+                          <div class="example">
+                            <h5>Пример</h5>
+                            <div class="padding-bottom-20">
+                              <img src="images/bottle.jpg" class="left xm-width-100" width="175px" style="margin-top: 4px;">
+
+                              <p class="example-image-text">Ввинчивайте спираль в&nbsp;пробку,
+                                два рычага поднимаются вверх. После
+                                этого остается только опустить рычаги&nbsp;&mdash;
+                                и&nbsp;пробка выйдет из&nbsp;бутылки.
+                              </p>
+
+                              <div class="clear"></div>
+                            </div>
+
+                            <div class="code-box">
+                              <div class="left width-50 ">
+                                <h5>Плохо</h5>
+                                <div>
+                                  <pre class="pre-normal">&lt;img src="clock.png"&gt;Ввинчивайте спираль в&nbsp;пробку, два рычага поднимаются вверх. После этого остается только опустить рычаги — и&nbsp;пробка выйдет из бутылки.</pre>
+                                </div>
+                              </div>
+
+                              <div class="left width-50">
+                                <h5>Хорошо</h5>
+                                <pre class="pre-normal">&lt;img src="clock.png" <span class="example-select">alt="Как отпустить рычаги, чтобы пробка вышла из&nbsp;бутылки"</span>&gt; Ввинчивайте спираль в пробку, два рычага поднимаются вверх. После этого остается только опустить рычаги&nbsp;— и&nbsp;пробка выйдет из бутылки.</pre>
+                              </div>
+
+                              <div class="clear"></div>
+                            </div>
+
+
+                          </div>
+
+                        </div>
+                        <!-- END Изображение передает краткую информацию -->
+
+                        <!-- Изображение дополняет текст -->
+                        <div>
+                          <h4>Изображение дополняет текст</h4>
+                          <p>
+                            Например, изображение собаки в&nbsp;статье про собак-проводников:
+                          </p>
+
+                          <div class="example">
+                            <h5>Пример</h5>
+                            <div class="padding-bottom-20">
+                              <img src="images/guide-dog.jpg" class="left xm-width-100" width="175px" style="margin-top: 4px;">
+
+                              <div class="example-image-text">
+                                <p>Собаки-проводники часто носят
+                                  на&nbsp;шее колокольчик, чтобы
+                                  владелец точно знал, где
+                                  находится собака.</p>
+                              </div>
+                              <div class="clear"></div>
+                            </div>
+
+                            <div class="code-box">
+                              <div class="left width-50 ">
+                                <h5>Плохо</h5>
+                                <div>
+                                  <pre>&lt;img src="dog.png"&gt;Собаки-проводники часто носят на шее колокольчик, чтобы владелец точно знал, где находится собака.</pre>
+                                </div>
+                              </div>
+
+                              <div class="left width-50">
+                                <h5>Хорошо</h5>
+                                <pre>&lt;img src="dog.png" <span class="example-select">alt="Собака-проводник с&nbsp;колокольчиком на шее"</span>&gt;Собаки-проводники часто носят на шее колокольчик, чтобы владелец точно знал, где находится собака.</pre>
+                              </div>
+
+                              <div class="clear"></div>
+                            </div>
+
+
+                          </div>
+
+                        </div>
+                        <!-- END Изображение дополняет текст -->
+
+                        <!-- Изображение обозначает текст -->
+                        <div>
+                          <h4>Изображение обозначает объект, который описывает текст</h4>
+                          <p>
+                            Например, иконка телефона рядом с&nbsp;телефонным номером:
+                          </p>
+
+                          <div class="example">
+                            <h5>Пример</h5>
+                            <div class="padding-bottom-20">
+                          <span class="block-inline" style="vertical-align: middle">
+                            <svg class="icon" style="width: 32px; height: 32px;">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
+                            </svg>
+                          </span>
+
+                              <span class="txt-large">+7 (988) 775 57 56</span>
+                            </div>
+
+                            <div class="code-box">
+                              <div class="left width-50 ">
+                                <h5>Плохо</h5>
+                                <div>
+<pre>&lt;img src="icon-phone.png"&gt;
++7 (988) 775 57 56</pre>
+                                </div>
+                              </div>
+
+                              <div class="left width-50">
+                                <h5>Хорошо</h5>
+                                <pre>&lt;img src="icon-phone.png" <span class="example-select">alt="Телефон:"</span>&gt;+7 (988) 775 57 56</pre>
+                              </div>
+
+                              <div class="clear"></div>
+                            </div>
+
+                          </div>
+                        </div>
+                        <!-- Изображение обозначает текст -->
+                      </div>
+                    </div>
+                    <!-- Декоративные изображения -->
+                    <div id="image-decoration">
+                      <h3>Декоративные</h3>
+
+                      <p>Добавляйте декоративные изображения с&nbsp;помощью свойства CSS <code>background-image,</code> чтобы скринридеры
+                        их&nbsp;игнорировали. Если декоративный элемент представлен в&nbsp;виде изображения, например, внутри ссылки, добавьте
+                        к&nbsp;нему пустой <code>alt=&quot;&quot;</code> или атрибуты <code>role=&quot;presentation&quot;</code>
+                        и&nbsp;<code><nobr>aria-hidden="true"</nobr></code>:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+
+                        <div class="padding-bottom-20">
+                          <img src="images/wave.png" class="width-100">
+                        </div>
+
+                        <div class="code-box">
+                          <div class="left width-50 ">
+                            <div class="item">
+                              <h5>Плохо</h5>
+                              <div>
+                                <pre style="white-space: normal">&lt;img src="gradient.png" alt="Градиент на&nbsp;фоне текста"&gt;</pre>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="left width-50">
+                            <div class="item">
+                              <h5>Хорошо</h5>
+                              <pre style="white-space: normal">&lt;img src="gradient.png" <span class="example-select">aria-hidden="true" alt=""</span>&gt;</pre>
+                            </div>
+                          </div>
+
+                          <div class="clear"></div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <!-- Декоративные изображения -->
+
+                    <!-- Графики, диаграммы -->
+                    <div id="image-graph">
+                      <h3>Графики, диаграммы</h3>
+
+                      <p>
+                        Для сложных изображений&nbsp;&mdash; карт, диаграмм, графиков&nbsp;&mdash; добавьте краткое описание
+                        в&nbsp;атрибут <code>alt</code> и&nbsp;полное описание на&nbsp;отдельную страницу,
+                        в&nbsp;тег <code>&lt;figcaption&gt;</code>, в&nbsp;атрибуты <code>longdesc</code> или <code class="block-inline">aria-describedby</code>.
+                      </p>
+
+                      <p>
+                        Добавьте ссылку на&nbsp;другую страницу или на фрагмент текущей страницы с&nbsp;полным описанием. Минус этого
+                        подхода&nbsp;&mdash; ссылка не&nbsp;связана с&nbsp;изображением по смыслу:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <div class="item-halb media-border"><img src="images/graph.svg" class="width-100" alt="График посещений сайта weblind.ru за 2016 год"></div>
+                          <div><a class="link">Описание изображения</a></div>
+                        </div>
+
+                        <div>
+<pre>&lt;img src="bar-chart.png" alt="График посещений сайта weblind.ru за 2016 год"&gt;
+&lt;a <span class="example-select">href="chart-info.html"</span>&gt;Описание изображения&lt;/a&gt;</pre>
+                        </div>
+                      </div>
+
+
+                      <p>
+                        Добавьте в&nbsp;<code>&lt;figure&gt;</code> с&nbsp;атрибутом <code>role=&quot;group&quot;</code> изображение и&nbsp;его описание.
+                        Оберните описание в&nbsp;<code>&lt;figcaption&gt;</code>:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <figure role="group">
+                            <div class="item-halb media-border"><img src="images/graph.svg" class="width-100" alt="График посещений сайта weblind.ru за 2016 год"></div>
+
+                            <figcaption>
+                              <a>График посещений сайта weblind.ru за 2016 год</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+
+                        <div>
+<pre>&lt;figure <span class="example-select">role="group"</span>&gt;
+  &lt;img src="chart-bar.png" alt="График посещений сайта weblind.ru за 2016 год" class="width-80"&gt;
+  <span class="example-select">&lt;figcaption&gt;</span>
+    &lt;a href="chart-bar.html"&gt;График посещений сайта weblind.ru за 2016 год&lt;/a&gt;
+  <span class="example-select">&lt;/figcaption&gt;</span>
+&lt;/figure&gt;</pre>
+                        </div>
+                      </div>
+
+                      <p>
+                        Добавьте к&nbsp;изображению атрибут <code>longdesc</code> или <code class="block-inline">aria-describedby</code>. Пропишите в&nbsp;него <code>id</code>&nbsp;элемента,
+                        внутри которого подробное описание изображения. Отличие примеров &mdash; в элементе
+                        с&nbsp;<code>id</code>&nbsp;из&nbsp;<code class="block-inline">aria-describedby</code> должен быть только текст, с&nbsp;<code>id</code>&nbsp;из&nbsp;<code>longdesc</code>
+                        можно добавлять дополнительные теги:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div>
+                          <div class="item-halb media-border"><img src="images/graph.svg" class="width-100" alt="График посещений сайта weblind.ru за 2016 год"></div>
+                          <p id="chart-longdesc">
+                            График посещений сайта weblind.ru за 2016 год &mdash; в октябре сайт посетили 26 тысяч человек, это самое большое количество посещений в 2017 году.
+                          </p>
+                        </div>
+
+                        <div>
+<pre>&lt;img src="chart-bar.png" alt="График посещений сайта weblind.ru за 2016 год" <span class="example-select">longdesc="#chart-longdesc"</span>&gt;
+&lt;p <span class="example-select">id="chart-longdesc"</span>&gt;
+  График посещений сайта weblind.ru за 2016 год&nbsp;—
+  в&nbsp;октябре сайт посетили 26 тысяч человек, это самое большое количество
+  посещений в 2017 году.
+&lt;/p&gt;</pre>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- /Графики, диаграммы -->
+
+                    <!-- Группы изображений -->
+                    <div id="image-group">
+                      <h3>Группы изображений</h3>
+
+                      <p>
+                        Для групп изображений, которые представляют одну и&nbsp;ту&nbsp;же информацию, например, звездочки
+                        рейтинга, добавьте описание в&nbsp;<code>alt</code> только к&nbsp;первому изображению:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <img src="images/i-star.png" width="32" alt="Рейтинг фильма 4 из 5">
+                          <img src="images/i-star.png" width="32" alt="">
+                          <img src="images/i-star.png" width="32" alt="">
+                          <img src="images/i-star.png" width="32" alt="">
+                          <img src="images/i-star-empty.png" width="32" alt="">
+                        </div>
+
+                        <div>
+<pre>&lt;img src="images/i-star.png" <span class="example-select">alt="Рейтинг фильма 4 из 5"</span>&gt;
+&lt;img src="images/i-star.png" alt=""&gt;
+&lt;img src="images/i-star.png" alt=""&gt;
+&lt;img src="images/i-star.png" alt=""&gt;
+&lt;img src="images/i-star-empty.png" alt=""&gt;</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /Группы изображений -->
+
+                  </div>
+                  <!-- /Изображения -->
+
+                  <!-- Медиа -->
+                  <div class="parent-box" id="parent-media">
+
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Аудио и&nbsp;видео
+                    </div>
+
+                    <div id="media">
+
+                      <h2 class="xm-none">Аудио и&nbsp;видео</h2>
+
+                      <div>
+
+                        <p class="intro-text">
+                          Добавьте альтернативное описание видео и&nbsp;аудио. Это поможет пользователям с&nbsp;нарушениями
+                          зрения узнать, о&nbsp;чем говорится в&nbsp;ролике или в&nbsp;аудио. Если у&nbsp;видео есть визуальная
+                          информация, которая не&nbsp;озвучена, добавьте аудиоописание.
+                        </p>
+                        <p>
+                          Для медиаконтента с&nbsp;длинным описанием можно использовать атрибуты <code class="block-inline">aria-describedby</code>, <code>longdesc</code> или
+                          невидимый для обычного пользователя блок с&nbsp;информацией.
+                        </p>
+
+                        <p>Для аудиозаписей или видео со&nbsp;звуком добавьте альтернативное текстовое описание в&nbsp;атрибуты <code class="block-inline">aria-describedby</code>,
+                          <code>longdesc</code> или ссылку на&nbsp;страницу с&nbsp;альтернативным описанием. Если в&nbsp;аудиозаписи есть диалог, указать, кто именно говорит.</p>
+
+                        <p>
+                          Для видео без звука к&nbsp;самому файлу добавьте краткое описание, отдельно добавьте длинное описание с&nbsp;помощью атрибутов
+                          <code class="block-inline">aria-describedby, longdesc</code>. Например, если видео&nbsp;&mdash; пошаговый рассказ как приготовить борщ, самому файлу добавьте атрибут
+                          <code>title</code> с&nbsp;описанием &laquo;Приготовление борща, рецепт от&nbsp;лучшего шеф-повара России Стаса Песоцкого&raquo;,
+                          в&nbsp;атрибут <code>longdesc</code> и&nbsp;<code class="block-inline">aria-describedby</code> добавьте id&nbsp;блока с&nbsp;подробным описанием каждого шага:
+                        </p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div>
+                            <p>Как видят мир люди с&nbsp;протанопией&nbsp;— нарушением в&nbsp;красной части спектра</p>
+                            <div class="item-halb">
+                              <iframe aria-describedby="video-description" class="width-100" width="560" height="320" src="https://www.youtube.com/embed/KcB_NhUNP0I?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                            </div>
+
+                            <p id="video-description">
+                              Видео показывает, как видят мир люди с&nbsp;протанопией&nbsp;&mdash; формой дальтонизма, при
+                              которой нарушается восприятие красной части спектра. Видео состоит из
+                              картинок&nbsp;&mdash; разноцветный пляжный зонт, осенний лес, зевающая львица, белые цветы, огонь,
+                              пешеходный переход с людьми, кактус, белый тигр, жираф, которые плавно сменяют друг друга.
+                              В кадре две одинаковых картинки&nbsp;&mdash; одна как видят люди с&nbsp;нормальным
+                              зрением, вторая&nbsp;&mdash; как видят люди с&nbsp;протанопией.
+                            </p>
+
+                          </div>
+
+                          <div>
+<pre>&lt;p&gt;Как видят мир люди с протанопией &mdash; нарушением в красной части спектра&lt;/p&gt;
+
+&lt;iframe <span class="example-select">aria-describedby="video-description"</span> width=&quot;560&quot; height=&quot;315&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p <span class="example-select">id=&quot;video-description&quot;</span>&gt;Видео показывает, как видят мир люди с&nbsp;протанопией&nbsp;&mdash; формой дальтонизма, при которой нарушается восприятие красной части спектра. Видео состоит из  картинок&nbsp;&mdash; разноцветный пляжный зонт, осенний лес, зевающая львица, белые цветы, огонь, пешеходный переход с людьми, кактус, белый тигр, жираф, которые плавно сменяют друг друга. В кадре две одинаковых картинки&nbsp;&mdash; одна как видят люди с&nbsp;нормальным зрением, вторая&nbsp;&mdash; как видят люди с&nbsp;протанопией.&lt;/p&gt;</pre>
+                          </div>
+                        </div>
+
+                        <p>
+                          Добавьте для видео аудиодескрипцию с описанием происходящего, как Иван&nbsp;Борщевский адаптировал <a href="https://www.youtube.com/watch?v=_KDlAGXXIcE" class="link">фильм&nbsp;«Титаник»</a>.
+                        </p>
+
+                        <p>
+                          Если на&nbsp;сайте есть автоматическии проигрываемая аудиозапись дольше трех&nbsp;секунд,
+                          дать пользователю возможность управлять воспроизведением.
+                        </p>
+
+                        <p>
+                          В&nbsp;начале страницы добавьте кнопки для остановки, воспроизведения и&nbsp;регулировки громкости
+                          звуков независимо от&nbsp;громкости системы. Другой вариант&nbsp;&mdash; вместо автоматического
+                          воспроизведения добавьте ссылку на&nbsp;включение аудиозаписи.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Медиа -->
+
+                  <!-- Формы -->
+                  <div class="parent-box" id="parent-form">
+
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Формы ввода
+                    </div>
+                    <div id="form-field">
+
+                      <h2 class="xm-none">Формы ввода</h2>
+
+                      <p class="intro-text">
+                        Опишите поля ввода с&nbsp;помощью <code>label</code>, атрибутов
+                        <code>title</code> или <code>aria-label</code>. Добавьте инструкции
+                        и&nbsp;ошибки в&nbsp;текстовом виде. Не&nbsp;используйте
+                        в&nbsp;подсказках визуальные свойства элементов. Это поможет слепым
+                        и&nbsp;слабовидящим заполнить форму&nbsp;—
+                        узнать названия полей и&nbsp;формат данных, получить результат отправки формы.
+                      </p>
+
+                      <div>
+                        <h3>Поля ввода</h3>
+
+                        <p>
+                          Добавьте названия ко&nbsp;всем полям ввода на&nbsp;форме, включая радиокнопки,
+                          чекбоксы, выпадающие списки. Название должно кратким и&nbsp;отображать назначение поля.
+                        </p>
+
+                        <p>
+                          Добавьте название с&nbsp;помощью элемента <code>label</code>, в&nbsp;атрибут <code>for</code> пропишите
+                          <code>id</code>&nbsp;поля:
+                        </p>
+
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div class="padding-bottom-20">
+                            <label for="example-1-input-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
+                            <input type="text" id="example-1-input-mail" class="textbox width-40">
+                          </div>
+
+                          <div class="code-box">
+                            <div class="left width-50">
+                              <h5>Плохо</h5>
+                              <div>
+<pre>&lt;label&gt;Электронная почта&lt;/label&gt;
+&lt;input type="text"&gt;</pre>
+                              </div>
+                            </div>
+
+                            <div class="left width-50">
+                              <h5>Хорошо</h5>
+<pre>&lt;label <span class="example-select">for="input-mail"</span>&gt;Электронная почта&lt;/label&gt;
+&lt;input type="text" <span class="example-select">id="input-mail"</span>&gt;</pre>
+                            </div>
+
+                            <div class="clear"></div>
+                          </div>
+
+                        </div>
+
+                        <p>
+                          Если лейбл нужно скрыть, расположите его перед полем, используйте
+                          привязку атрибута <code>for</code> и&nbsp;специальный класс для&nbsp;вспомогательных технологий:
+                        </p>
+
+                        <div class="padding-bottom-10">
+<pre>.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+</pre></div>
+
+                        <p>
+                          Этот класс скрывает лейбл визуально, но&nbsp;его прочтут скринридеры. Обратите внимание, что
+                          скринридеры и&nbsp;другие вспомогательные технологии, как и&nbsp;браузеры,
+                          скрывают элементы с&nbsp;использованием <code>display: none</code> и&nbsp;<code>visibility: hidden</code>.
+                          Подробнее о&nbsp;скрытом label можно узнать в&nbsp;статье <a href="https://allyjs.io/tutorials/hiding-elements.html"><nobr>Hiding DOM elements</nobr></a>.
+                        </p>
+
+                        <p>
+                          Еще один способ связывания поля и&nbsp;подписи&nbsp;&mdash; атрибут <code>aria-labelledby</code>.
+                          Он&nbsp;используется как атрибут <code>for</code> для&nbsp;<code>label</code>, значение этого атрибута совпадает
+                          со&nbsp;значение id&nbsp;поля:
+                        </p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div class="padding-bottom-20">
+                            <label for="example-2-input-mail" id="example-2-label-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
+                            <input type="text" id="example-2-input-mail" aria-labelledby="example-2-label-mail" class="textbox width-40">
+                          </div>
+
+                          <div>
+<pre>&lt;label for="input-mail" <span class="example-select">id="label-mail"</span>&gt;Электронная почта&lt;/label&gt;
+&lt;input type="text" id="input-mail" <span class="example-select">aria-labelledby="label-mail"</span>&gt;</pre>
+                          </div>
+                        </div>
+
+
+                        <p>
+                          Название поля можно указать в&nbsp;атрибутах <code>aria-label</code> или <code>title</code>. Второй метод менее надежный,
+                          название будет видно всем пользователям в виде белой всплывашки при наведении на поле:
+                        </p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div class="padding-bottom-20">
+                            <input type="text" id="input-search" class="textbox width-40" aria-label="Поиск по странам">
+                            <a class="button primary">Найти</a>
+                          </div>
+
+                          <div>
+                            <div>
+<pre>&lt;input type="text" id="input-search" <span class="example-select">aria-label="Поиск по странам"</span>&gt;
+&lt;a class="button primary" &gt;Найти&lt;/a&gt;</pre>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <p>
+                          Используйте поля ввода с&nbsp;указанным типом данных, например email, url, number, range, date, или time. Браузеры, которые
+                          их не подддерживают, покажут текстовое поле с&nbsp;<code>type="text"</code>.
+                        </p>
+
+                        <p>
+                          Добавьте на&nbsp;форму инструкции по&nbsp;заполнению полей, отметьте обязательные поля, чтобы
+                          избежать ошибок. Обязательные поля можно указать в&nbsp;названии поля <code>label</code>, добавить
+                          к&nbsp;полю атрибуты <code>required</code> или <code>aria-required=&quot;true&quot;</code>.
+                        </p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div class="padding-bottom-20">
+                            <label for="example-3-input-mail" id="example-3-label-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
+                            <input type="email" id="example-3-input-mail" aria-labelledby="example-3-label-mail" class="textbox width-40" aria-required="true" required>
+                          </div>
+
+                          <div>
+<pre>&lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;
+&lt;input <span class="example-select">type="email"</span> id="input-mail" aria-labelledby="label-mail" <span class="example-select">aria-required="true" required</span>&gt;</pre>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div  id="form-group">
+                      <h3>Группы полей</h3>
+
+                      <p>
+                        Группировка связанных полей помогает разделить форму на&nbsp;части
+                        и&nbsp;лучше ее&nbsp;воспринять.
+                      </p>
+
+                      <p>
+                        Группируйте поля с&nbsp;помощью элементов <code>&lt;fieldset&gt;</code> и&nbsp;<code>&lt;legend&gt;</code>. Элемент
+                        <code>&lt;fieldset&gt;</code>&nbsp;&mdash; контейнер для связанных элементов формы, элемент <code>&lt;legend&gt;</code>&nbsp;&mdash;
+                        заголовок группы, где можно прописать не&nbsp;только назначение группы, но&nbsp;и&nbsp;общие
+                        характеристики полей. Например, указать, что все поля группы обязательны:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <fieldset>
+                            <legend class="form-title">Контакты</legend>
+                            <div>
+                              <p>
+                                <label for="example-4-input-mail" id="example-4-label-mail" class="example-label" >Электронная почта</label>
+                                <input id="example-4-input-mail" type="email" aria-labelledby="example-4-label-mail" class="textbox width-40" aria-required="true">
+                              </p>
+
+                              <p>
+                                <label for="example-4-input-phone" id="example-4-label-phone" class="example-label" >Телефон</label>
+                                <input id="example-4-input-phone" type="email" aria-labelledby="example-4-label-phone" class="textbox width-40" aria-required="true">
+                              </p>
+                            </div>
+                          </fieldset>
+
+
+                        </div>
+
+                        <div>
+<pre><span class="example-select">&lt;fieldset&gt;</span>
+  <span class="example-select">&lt;legend&gt;Контакты&lt;/legend&gt;</span>
+  &lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;
+  &lt;input type="email" id="input-mail" aria-labelledby="label-mail"&gt;
+
+  &lt;label for="input-phone" id="label-phone"&gt;Телефон&lt;/label&gt;
+  &lt;input type="email" id="input-phone" aria-labelledby="label-phone"&gt;
+<span class="example-select">&lt;/fieldset&gt;</span>
+</pre>
+                        </div>
+
+                      </div>
+
+                      <p>
+                        Еще один способ группировки полей формы&nbsp;&mdash; использование атрибутов <code>role=&quot;group&quot;</code>
+                        и&nbsp;<code>aria-labelledby</code>, куда нужно прописать id&nbsp;элемента, котором содержится описание группы
+                        полей:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <div role="group" aria-labelledby="user-data">
+                            <div id="user-data" class="form-title">Контакты</div>
+                            <div>
+                              <p>
+                                <label for="example-5-input-mail" id="example-5-label-mail" class="example-label" >Электронная почта</label>
+                                <input id="example-5-input-mail" type="email" aria-labelledby="example-5-label-mail" class="textbox width-40" aria-required="true">
+                              </p>
+
+                              <p>
+                                <label for="example-5-input-phone" id="example-5-label-phone" class="example-label" >Телефон</label>
+                                <input id="example-5-input-phone" type="email" aria-labelledby="example-5-label-phone" class="textbox width-40" aria-required="true">
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+<pre>&lt;div <span class="example-select">role="group" aria-labelledby="user-data"&gt;</span>
+  &lt;div <span class="example-select">id="user-data"</span>&gt;Контакты&lt;/div&gt;
+  &lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;
+  &lt;input type="email" id="input-mail" aria-labelledby="label-mail"&gt;
+
+  &lt;label for="input-phone" id="label-phone"&gt;Телефон&lt;/label&gt;
+  &lt;input type="email" id="input-phone" aria-labelledby="label-phone"&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div  id="form-label">
+                      <h3>Инструкции</h3>
+
+                      <p>
+                        Дайте пользователю понятные инструкции по&nbsp;вводу данных. Укажите обязательные поля,
+                        допустимые форматы данных и&nbsp;ограничения времени. Разместите инструкцию перед элементом
+                        <code>&lt;form&gt;</code>, чтобы скринридер прочитал инструкцию, прежде чем войдет в&nbsp;режим чтения форм.
+                      </p>
+
+                      <p>
+                        Для простых инструкций используйте подсказки прямо в&nbsp;описании поля. Например, для поля даты
+                        можно написать название &laquo;Дата выдачи документа (день, месяц, год):&raquo;:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <label for="example-6-input-mail" id="example-6-label-mail" class="example-label">Электронная почта (обязательно)</label>
+                          <input id="example-6-input-mail" type="email" aria-labelledby="example-6-label-mail" class="textbox width-40" aria-required="true">
+                        </div>
+
+                        <div>
+<pre>&lt;label for="input-mail" id="label-mail"&gt;Электронная почта <span class="example-select">(обязательно)</span>&lt;/label&gt;
+&lt;input type="email" id="input-mail" aria-labelledby="label-mail" <span class="example-select">aria-required="true"</span>&gt;</pre>
+                        </div>
+                      </div>
+
+                      <p>
+                        Иногда формат данных указывает атрибут <code>placeholder</code>. Скринридеры
+                        не&nbsp;воспринимают его как описание поля ввода, поэтому нужно использовать
+                        альтернативный способ. Например, использовать атрибут <code class="block-inline">aria-describedby</code> с&nbsp;id&nbsp;элемента,
+                        в&nbsp;котором прописана инструкция.
+                      </p>
+
+                      <div>
+                        <div>
+                          В инструкциях по работе с сайтом не используйте только визуальные характеристики:
+                        </div>
+
+                        <ul class="list-none">
+                          <li>цвет — «нажмите зеленую кнопку»;</li>
+                          <li>размер — «важные советы написаны большими буквами»;</li>
+                          <li>форма — «нажмите на квадратную кнопку»;</li>
+                          <li> положение объекта на странице — «описание выше».</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div  id="form-valid">
+                      <h3>Уведомления</h3>
+
+                      <p>
+                        Выводите уведомления об&nbsp;ошибках и&nbsp;успехе. Уведомления должны быть краткими и&nbsp;понятными.
+                        Сообщения об&nbsp;ошибках должны содержать простые инструкции по&nbsp;исправлению. Сообщения успеха важны для&nbsp;подтверждения завершения задачи.
+                      </p>
+
+                      <p>
+                        Способ вывода уведомлений зависит от&nbsp;типа&nbsp;&mdash; общие уведомления формы
+                        и&nbsp;уведомления к&nbsp;отдельным полям.
+                      </p>
+
+                      <p>
+                        <strong>Общие уведомления.</strong>
+                        Дайте пользователю обратную связь о&nbsp;результатах отправки формы.
+                        Если страница обновляется после отправки формы, измените <code>title</code> страницы на&nbsp;ошибку
+                        или добавьте заголовок h1 с&nbsp;сообщением об&nbsp;ошибке.
+                      </p>
+
+                      <p>
+                        Если страница не&nbsp;обновляется, добавьте список ошибок с&nbsp;атрибутом <code>role=&quot;alert&quot;</code>
+                        над элементом формы. Свяжите каждую ошибку с&nbsp;полем с&nbsp;помощью атрибута <code class="block-inline">aria-describedby</code>.
+                        Атрибут <code class="block-inline">aria-describedby</code> можно обновлять динамически&nbsp;&mdash; в&nbsp;обычном состоянии
+                        он&nbsp;указывает на&nbsp;подсказку или описание поля, а&nbsp;в&nbsp;случае ошибки ввода&nbsp;&mdash;
+                        на&nbsp;текст ошибки (вместо или вместе с&nbsp;подсказкой&nbsp;&mdash; <code><nobr>aria-describedby</nobr></code> может
+                        содержать несколько идентификаторов):
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <p class="txt-danger" id="label-mail6">Неправильный формат электронной почты</p>
+                          <p>
+                            <label for="example-7-input-mail" id="example-7-label-mail" class="example-label" >Электронная почта</label>
+                            <input id="example-7-input-mail" type="email" aria-labelledby="example-7-label-mail" class="textbox width-40" aria-required="true" value="suhoverhova.an">
+                          </p>
+
+                          <p>
+                            <label for="example-7-input-phone" id="example-7-label-phone" class="example-label" >Телефон</label>
+                            <input id="example-7-input-phone" type="email" aria-labelledby="example-7-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
+                          </p>
+                        </div>
+
+                        <div>
+<pre>&lt;p class=&quot;txt-danger&quot; <span class="example-select">id=&quot;danger-mail&quot;</span>&gt;Неправильный формат электронной почты&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="input-mail"&gt;Электронная почта&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id="input-mail" <span class="example-select">aria-labelledby=&quot;danger-mail&quot;</span> class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;label for="input-phone"&gt;Телефон&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id="input-phone" class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;
+&lt;/p&gt;</pre>
+                        </div>
+                      </div>
+
+                      <p>
+                        Если данные формы имеют финансовую или юридическую значимость, добавьте подтверждение отправки формы,
+                        где пользователь еще раз можно проверить введенные данные, и&nbsp;возможность отменить отправку формы
+                        в&nbsp;течение определенного промежутка времени.
+                      </p>
+
+                      <p>
+                        <strong>Уведомления к&nbsp;полям</strong> можно выводить после отправки
+                        формы или во&nbsp;время ввода.
+                      </p>
+
+                      <p>
+                        После отправки формы установите фокус в&nbsp;первое поле, чтобы пользователь узнал о&nbsp;результатах
+                        проверки каждого поля. Если произошла ошибка ввода данных, выводите ее&nbsp;в&nbsp;текстовом виде после поля.
+                        Свяжите ошибку с&nbsp;полем с&nbsp;помощью атрибута <code class="block-inline">aria-describedby</code>.
+                      </p>
+
+                      <p>
+                        Для вывода ошибок, когда поле проверяется во&nbsp;время ввода, добавьте после поля область
+                        с&nbsp;атрибутом <code class="block-inline">aria-live=&quot;polite&quot;</code>. Если поле проверяется после потери фокуса, добавьте
+                        после поля атрибут <code class="block-inline">aria-live=&quot;assertive&quot;</code>. Программно добавляйте ошибку в&nbsp;этот элемент.
+                        Отличие подходов в&nbsp;том, что <code class="block-inline">aria-live=&quot;assertive&quot;</code> прерывает все текущие задачи скриридера.
+                        Если применить его для проверки поля во&nbsp;время ввода, после каждого изменения
+                        скринридер будет перескакивать на&nbsp;этот элемент и&nbsp;читать его несколько раз:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <p>
+                            <label for="example-8-input-mail" id="example-8-label-mail" class="example-label">Электронная почта</label>
+                            <input id="example-8-input-mail" aria-labelledby="example-8-label-mail" type="email" class="textbox width-40" aria-required="true" value="suhoverhova.an"><br/>
+                            <label class="example-label xm-none" style="opacity: 0">Электронная почта</label>
+                            <span class="txt-danger" id="example-8-label-mail"><small>Неправильный формат</small></span>
+                          </p>
+
+                          <p>
+                            <label for="example-8-input-phone" id="example-8-label-phone" class="example-label">Телефон</label>
+                            <input id="example-8-input-phone" type="email" aria-labelledby="example-8-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
+                          </p>
+                        </div>
+
+                        <div>
+<pre>[...]
+&lt;label for="input-mail" id=&quot;label-mail&quot;&gt;Электронная почта&lt;/label&gt;
+&lt;input type=&quot;email&quot; id="input-mail" aria-describedby=&quot;label-mail&quot; class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;
+&lt;small <span class="example-select">aria-live=&quot;polite&quot;</span> id=&quot;label-mail&quot;&gt;Неправильный формат электронной почты&lt;/small&gt;
+[...]</pre>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div  id="form-more">
+                      <h3>Многостраничные формы</h3>
+
+                      <p>
+                        Покажите пользователю прогресс заполнения, обеспечьте общие инструкции
+                        и&nbsp;проверку ошибок каждого шага, дайте возможность перейти к&nbsp;любому шагу.
+                      </p>
+
+                      <p>
+                        Для обозначения текущего шага формы используйте <code>title</code> или заголовок h1&nbsp;страницы. Для перехода
+                        на&nbsp;каждый шаг используйте пошаговый индикатор с&nbsp;перечислением всех шагов и&nbsp;статуса
+                        каждого шага.
+                      </p>
+
+                      <p>
+                        Каждый шаг&nbsp;&mdash; отдельная форма, к&nbsp;нему применимы все принципы, описанные выше
+                        в&nbsp;разделе &laquo;Формы ввода&raquo;.
+                      </p>
+                    </div>
+
+                  </div>
+                  <!-- /Формы -->
+
+                  <!-- Таблицы -->
+                  <div class="parent-box" id="parent-table">
+
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Таблицы
+                    </div>
+
+                    <div id="table">
+                      <h2 class="xm-none">Таблицы</h2>
+
+                      <p class="intro-text">
+                        Укажите взаимосвязи между ячейками, используйте семантически правильные теги для обозначения ячеек.
+                        Для ячеек-заголовков используйте <code>&lt;th&gt;</code>. Для связывания ячейки с&nbsp;данными используйте
+                        атрибут scope. Это поможет слепым и&nbsp;слабовидящим пользователям ориентироваться в&nbsp;таблице&nbsp;— узнать заголовки таблицы,
+                        правильно перемещаться по&nbsp;строкам и&nbsp;столбцам.
+                      </p>
+
+                      <p>Для простых таблиц с одним заголовком используйте значения <code>row</code> или <code>col</code>:</p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <table class="horizontal width-100">
+                            <colgroup>
+                              <col style="width: 50%;">
+                              <col>
+                              <col>
+                            </colgroup>
+
+                            <thead>
+                            <tr>
+                              <th scope="col">ФИО</th>
+                              <th scope="col">Возраст</th>
+                              <th scope="col">Профессия</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                              <td>Иванов Александр Александрович</td>
+                              <td>23 года</td>
+                              <td>Врач</td>
+                            </tr>
+                            <tr>
+                              <td>Китаева Анна Сергеевна</td>
+                              <td>34 года</td>
+                              <td>Учитель</td>
+                            </tr>
+                            <tr>
+                              <td>Колосова Александра Ивановна</td>
+                              <td>32 года</td>
+                              <td>Программист</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div>
+<pre>&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Фамилия&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Имя&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Отчество&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Возраст&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Профессия&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;</pre>
+                        </div>
+                      </div>
+
+                      <div>
+                        <p>Для таблиц с&nbsp;двумя заголовками используйте одновременно <code>row</code> для верхних заголовков, <code>col</code> для горизонтальных строк.</p>
+
+                        <p>Используйте элемент <code>&lt;caption&gt;</code> или атрибут <code class="block-inline">aria-describedby</code> для заголовка таблицы:</p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div class="padding-bottom-20">
+                            <table class="horizontal width-100">
+                              <caption>Участники проекта «Курьер»</caption>
+
+                              <colgroup>
+                                <col style="width: 50%;">
+                                <col>
+                                <col>
+                              </colgroup>
+
+                              <thead>
+                              <tr>
+                                <th scope="col">ФИО</th>
+                                <th scope="col">Возраст</th>
+                                <th scope="col">Профессия</th>
+                              </tr>
+                              </thead>
+
+                              <tbody>
+                              <tr>
+                                <td>Иванов Александр Александрович</td>
+                                <td>23 года</td>
+                                <td>Врач</td>
+                              </tr>
+                              <tr>
+                                <td>Китаева Анна Сергеевна</td>
+                                <td>34 года</td>
+                                <td>Учитель</td>
+                              </tr>
+                              <tr>
+                                <td>Колосова Александра Ивановна</td>
+                                <td>32 года</td>
+                                <td>Программист</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <div>
+<pre><span class="example-select">&lt;caption&gt;Расписание работы магазина&lt;/caption&gt;</span>
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Фамилия&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Имя&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Отчество&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Возраст&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;Профессия&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;</pre>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Таблицы -->
+
+                  <!-- Текст -->
+                  <div class="parent-box" id="parent-text">
+
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Текст
+                    </div>
+
+                    <div id="text-css">
+                      <h2 class="xm-none">Текст</h2>
+
+                      <p class="intro-text">
+                        Оформляйте текст с&nbsp;помощью CSS, не&nbsp;показывайте текст картинкой.
+                        Объясняйте аббревиатуры и&nbsp;сложные термины. Это поможет пользователям
+                        воспринять весь&nbsp;текст.
+                      </p>
+
+                      <div>
+                        <h3>CSS-оформление</h3>
+                        <p>
+                          Предоставьте всё возможное содержимое в&nbsp;виде текста. Избегайте текста, представленного
+                          в&nbsp;виде изображения. Для оформления текста используйте <nobr>CSS-свойство</nobr>&nbsp;<code>font</code>:
+                        </p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div class="padding-bottom-20">
+                            <span class="decor">Настала ночь первой упавшей звезды.</span>
+                          </div>
+                          <div>
+<pre>&lt;span class="decor"&gt;Настала ночь первой упавшей звезды.&lt;/span&gt;
+<span class="example-select">.decor {
+  font-family: 'Bad Script', cursive;
+  font-size: 2rem;
+}</span></pre>
+                          </div>
+                        </div>
+
+                        <p>Если вы&nbsp;все&nbsp;же используете изображение текста, добавьте такой&nbsp;же текст в&nbsp;атрибут <code>alt</code>.</p>
+
+
+                      </div>
+                    </div>
+
+                    <div id="text-abbr">
+                      <h3>Аббревиатуры и&nbsp;определения</h3>
+                      <p>Расшифруйте аббревиатуры и&nbsp;дайте определения сложным терминам. </p>
+
+                      <p>Добавьте аббревиатуры в&nbsp;<code>&lt;abbr&gt;</code>, расшифровку в&nbsp;атрибут <code>title</code>:</p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-10">
+                          <abbr title="Младший научный сотрудник">М.&nbsp;н.&nbsp;с.</abbr> Александр&nbsp;Григорьевич Петров защитил диссертацию 15 января 2017 года.
+                        </div>
+                        <div>
+<pre>&lt;abbr <span class="example-select">title="Младший научный сотрудник"</span>&gt;М.&nbsp;н.&nbsp;с.&lt;/abbr&gt; АлександрмГригорьевич Петров
+защитил диссертацию 15 января 2017 года.</pre>
+                        </div>
+                      </div>
+
+                      <p>
+                        Для определения сложных слов используйте <code>&lt;dfn&gt;</code> для выделения, атрибут
+                        <code>rel</code> для&nbsp;ссылок,
+                        конструкцию <code>&lt;dl&gt;</code>&nbsp;для списка определений:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+
+                          <dl class="list w-30">
+                            <dt>Аэроб</dt>
+                            <dd>организм, способный жить лишь в&nbsp;среде, содержащей свободный молекулярный кислород</dd>
+
+                            <dt>Бактериоцид</dt>
+                            <dd>
+                              антибактериальное вещество (белки), вырабатываемое бактериями определенного вида и&nbsp;подавляющее жизнедеятельность бактерий других видов
+                            </dd>
+
+                            <dt>Бацилла</dt>
+                            <dd>
+                              любая бактерия, имеющая форму палочки
+                            </dd>
+                          </dl>
+
+                        </div>
+                        <div>
+<pre><span class="example-select">&lt;dl&gt;</span>
+  &lt;dt&gt;Аэроб&lt;/dt&gt;
+  &lt;dd&gt;организм, способный жить лишь в среде, содержащей свободный молекулярный кислород&lt;/dd&gt;
+   &lt;dt&gt;Бактериоцид&lt;/dt&gt;
+   &lt;dd&gt;
+     антибактериальное вещество (белки), вырабатываемое бактериями определенного вида
+     и&nbsp;подавляющее жизнедеятельность бактерий других видов
+   &lt;/dd&gt;
+   &lt;dt&gt;Бацилла&lt;/dt&gt;
+   &lt;dd&gt;любая бактерия, имеющая форму палочки&lt;/dd&gt;
+<span class="example-select">&lt;/dl&gt;</span></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /Текст -->
+
+                  <!-- Страница -->
+                  <div class="parent-box" id="parent-page">
+
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Страница
+                    </div>
+
+                    <div id="page-title">
+                      <h2 class="xm-none">Страница</h2>
+
+
+                      <p class="intro-text">
+                        Укажите <code>&lt;title&gt;</code> и&nbsp;язык страницы. Добавьте ссылку для перехода к&nbsp;основному
+                        контенту. Предоставьте несколько способов поиска содержимого: карта сайта, поиск по&nbsp;сайту.
+                        Не&nbsp;допускайте изменений страницы при&nbsp;фокуcе на&nbsp;элементе или вводе данных.
+                        Это поможет слепым и&nbsp;слабовидящим пользователям ориентироваться на&nbsp;сайте.
+                      </p>
+
+                      <div>
+                        <h3><code>&lt;title&gt;</code> страницы</h3>
+
+                        <p>
+                          Добавьте <code>&lt;title&gt;</code> для каждой страницы. Текст должен описывать название и&nbsp;назначение страницы.
+                          При навигации по&nbsp;сайту без перезагрузки страницы также следует изменять содержимое <code>&lt;title&gt;</code>:
+                        </p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div>
+                            <pre>&lt;title&gt;Магазин продуктов «Роща»&lt;/title&gt;</pre>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div id="page-language">
+                      <h3>Язык содержимого</h3>
+                      <p>
+                        Укажите язык в&nbsp;атрибуте
+                        <code>lang</code> для <code>&lt;html&gt;</code>, чтобы синтезаторы речи точно определили язык страницы.
+                        Примеры значений атрибута: <code>ru</code>&nbsp;— русский язык, <code>en</code>&nbsp;— английский язык,
+                        <code>de</code>&nbsp;— немецкий язык. Все значения можно посмотреть <a
+                          href="http://htmlbook.ru/html/value/lang"><nobr>на&nbsp;сайте htmlbook.ru</nobr></a>.
+                      </p>
+                      <p>
+                        Если у&nbsp;отдельной фразы или абзаца другой язык, его нужно указать отдельно.
+                        Это не&nbsp;относится к&nbsp;именам собственным, техническим терминам, устойчивым выражениям,
+                        которые заимствованы из&nbsp;другого языка:
+                      </p>
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-10">
+                          Пословица «Аппетит приходит во время еды» по-немецки звучит как <span lang="de">«Der Appetit kommt beim Essen»</span>
+                        </div>
+                        <div>
+                          <pre>Пословица &laquo;Аппетит приходит во время еды&raquo; по-немецки звучит как &lt;span lang=&quot;de&quot;&gt;&laquo;Der Appetit kommt beim Essen&raquo;&lt;/span&gt;</pre>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="page-block">
+                      <h3>Повторяющиеся блоки</h3>
+                      <p>
+                        Добавьте в&nbsp;начало сайта ссылку перехода к&nbsp;основному содержимому, чтобы пользователь
+                        при желании пропустил повторяющиеся блоки (шапку, навигацию).
+                      </p>
+                      <p>
+                        Другие варианты&nbsp;&mdash; добавить в&nbsp;начало страницы ссылки на&nbsp;все блоки сайта или
+                        в&nbsp;начало каждого блока добавить ссылку на&nbsp;его конец.
+                      </p>
+                    </div>
+
+                    <div id="page-search">
+                      <h3>Поиск содержимого</h3>
+                      <p>
+                        Дайте пользователю возможность искать содержимое несколькими способами: список связанных страниц,
+                        оглавление, карта сайта, поиск, список всех страниц сайта и&nbsp;т.&nbsp;д.
+                      </p>
+                    </div>
+
+                    <div id="page-context">
+                      <h3>Изменение страницы</h3>
+                      <p>
+                        Перенос фокуса, изменение настроек компонента не&nbsp;должны вызывать изменений страницы,
+                        кроме случаев, когда пользователя уведомили об&nbsp;этом до&nbsp;того, как он&nbsp;использовал этот компонент.
+                      </p>
+                      <p>
+                        Распространенный случай&nbsp;&mdash; переход на&nbsp;другую страницу или открытие нового окна
+                        по&nbsp;событию <code>onchange</code> на&nbsp;элементах <code>&lt;select&gt;</code>, радиокнопках или чекбоксах. Избегайте
+                        такого поведения, переходите на&nbsp;другую страницу только по&nbsp;нажатию на&nbsp;кнопку или на&nbsp;Enter.
+                      </p>
+                      <p>
+                        Изменения страницы должны происходить только по&nbsp;запросу пользователя или пользователь может отменить изменение.
+                      </p>
+                    </div>
+
+                  </div>
+                  <!-- /Страница -->
+
+                  <!-- Верстка -->
+                  <div class="parent-box" id="parent-html">
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Верстка
+                    </div>
+
+                    <div id="html-semantic">
+
+                      <h2 class="xm-none">Верстка</h2>
+
+                      <p class="intro-text">
+                        Проверьте валидность, семантику верстки и&nbsp;правильную последовательность кода страницы, чтобы пользователи
+                        со&nbsp;скринридерами не&nbsp;потеряли информацию при чтении.
+                      </p>
+
+                      <p class="intro-text">
+                        Сделайте адаптивную верстку. Это поможет пользователям настроить сайт&nbsp;&mdash; увеличить масштаб или шрифт.
+                      </p>
+
+                      <div>
+                        <h3>Семантика</h3>
+
+                        <p>
+                          Верстка должна быть семантически правильной&nbsp;&mdash; используйте элементы HTML
+                          по&nbsp;смысловому назначению. Помните, что не&nbsp;все браузеры отображают
+                          содержимое специальных тегов одинаково.
+                        </p>
+
+                        <p>
+                          Для заголовков используйте <code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</code>. Соблюдайте четкую иерархию заголовков.
+                        </p>
+
+                        <p>
+                          Для маркерованных списков используйте <code>&lt;ul&gt;</code>, для нумерованных&nbsp;<code>&lt;ol&gt;</code>.
+                        </p>
+
+                        <div>Используйте теги HTML5:</div>
+                        <ul class="list-none padding-bottom-10">
+                          <li>
+                            <code>&lt;header&gt;</code> для шапки сайта. Поместите вводные элементы сайта, которые есть на&nbsp;каждой странице&nbsp;&mdash;
+                            логотип, навигация, заголовок страницы, поиск;
+                          </li>
+                          <li><code>&lt;nav&gt;</code> для навигации по&nbsp;сайту;</li>
+                          <li>
+                            <code>&lt;section&gt;</code> для разделения страницы на&nbsp;смысловые части;
+
+                          </li>
+                          <li>
+                            <code>&lt;aside&gt;</code> для боковой колонки со&nbsp;списком статей,
+                            рекламы, архивных записей;
+                          </li>
+                          <li>
+                            <code>&lt;footer&gt;</code> для нижнего блока страницы с&nbsp;информацией об&nbsp;авторе статьи, данные о&nbsp;копирайте
+                            и&nbsp;т. д.
+                          </li>
+                          <li>
+                            <code>&lt;figure&gt;</code> для группировки элементов, например, картинку и&nbsp;текст;
+                          </li>
+                          <li>
+                            <code>&lt;main&gt;</code> для основного содержимого страницы.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="html-scale">
+                      <h3>Адаптивность</h3>
+
+                      <p>Используйте адаптивную верстку и&nbsp;относительные единицы размера шрифта, чтобы дать пользователю возможность увеличивать масштаб страницы не&nbsp;менее чем в&nbsp;два раза.</p>
+                      <p>Горизонтальная прокрутка при масштабировании сайта менее чем в&nbsp;два раза приводит к&nbsp;потере информации. Адаптивная верстка решит эту проблему.</p>
+                      <div>Относительный единицы измерения размеров шрифтов:</div>
+                      <ul class="list-none">
+                        <li>rem&nbsp;&mdash; размер шрифта рассчитывается относительно значения, прописанного для&nbsp;<code>&lt;html&gt;</code>;</li>
+                        <li>em&nbsp;и&nbsp;%&nbsp;&mdash; размер шрифта рассчитывается относительно значения, прописанного для ближайшего родителя текущего элемента.</li>
+                      </ul>
+                    </div>
+
+                    <div id="html-valid">
+                      <h3>Валидность</h3>
+
+                      <p>
+                        Соблюдайте валидность верстки&nbsp;&mdash; соответствие спецификации W3C. Проверяйте вложенность
+                        тегов, закрывайте все теги, проверяйте написание атрибутов и&nbsp;кавычек, не&nbsp;повторяйте
+                        один и&nbsp;тот&nbsp;же id&nbsp;несколько раз на&nbsp;странице. Скринридеры могут
+                        неправильно воспринимать невалидную верстку.
+                      </p>
+
+                      <p>Проверьте валидность верстки с&nbsp;помощью <a href="https://validator.w3.org/">онлайн-валидатора W3C</a>.</p>
+                    </div>
+
+                    <div id="html-sequence">
+                      <h3>Последовательность кода</h3>
+
+                      <p>Расположите элементы в&nbsp;разметке в&nbsp;правильном порядке независимо от&nbsp;визуального
+                        представления, чтобы скринридеры читали содержимое последовательно. Проверить последовательность
+                        можно отключив CSS-стили.
+                      </p>
+                      <p>
+                        Самые распространенные ошибки&nbsp;&mdash; неправильное использование CSS-свойств <code>position:absolute</code>,
+                        <code>float:right</code>, <code>order</code> для <code>flexbox</code> и&nbsp;<code>grid</code>. Например, на&nbsp;сайте левая колонка&nbsp;&mdash;
+                        основной контент, правая колонка&nbsp;&mdash; ссылки на&nbsp;новости. Если допустить ошибку,
+                        пользователь сначала прослушает ссылки на&nbsp;новости, только потом перейдет к&nbsp;основному
+                        контенту.
+                      </p>
+                      <p>
+                        Показать направление чтения, например для арабского языка, можно с&nbsp;помощью специальных
+                        символов <code>&amp;lrm;</code> (слева направо), &nbsp;<code>&amp;rlm;</code> (справа налево) и&nbsp;атрибута <code>dir</code>
+                        со значениями <code>ltr</code> (слева направо) и&nbsp;<code>rtl</code> (справа налево).
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Верстка -->
+
+                  <!-- Навигация -->
+                  <div class="parent-box" id="parent-nav">
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Навигация
+                    </div>
+
+                    <div id="nav-menu">
+
+                      <h2 class="xm-none">Навигация</h2>
+
+                      <p class="intro-text">
+                        Сделайте одинаковую навигацию на&nbsp;всех страницах. Правильно верстайте вложенные меню. Дайте
+                        пользователю информацию о&nbsp;текущем положении на&nbsp;странице. Это поможет слепым и&nbsp;слабовидящим пользователям
+                        свободно перемещаться по&nbsp;сайту, узнать текущее положение.
+                      </p>
+
+                      <div>
+                        <h3>Меню</h3>
+
+                        <p>
+                          Используйте элемент <code>nav</code> для навигации. Если последовательность пунктов меню не&nbsp;важна,
+                          используйте неупорядоченный список&nbsp;<code>ul</code>, если важна&nbsp;&mdash; список&nbsp;<code>ol</code>.
+                        </p>
+                        <p>
+                          Добавьте заголовок меню в&nbsp;атрибут <code class="block-inline">aria-label</code>
+                          или <code class="block-inline">aria-labelledby</code>, чтобы пользователь понял назначение меню.
+                        </p>
+
+                        <p>
+                          Для текущего пункта меню удалите ссылку, добавьте невидимый текст &laquo;Текущий пункт:&raquo;.
+                          Добавьте к&nbsp;текущему пункту меню атрибут <code>aria-current="page"</code>:
+                        </p>
+
+                        <div class="example">
+                          <h5>Пример</h5>
+                          <div class="padding-bottom-20">
+                            <nav>
+                              <ul class="menu-h">
+                                <li class="level-1 active" aria-current="page"><span><span class="visually-hidden">Текущий пункт:</span>Шапки, шарфы, варежки</span></li>
+                                <li class="level-1"><span><a>Цены</a></span></li>
+                                <li class="level-1"><span><a>Контакты</a></span></li>
+                              </ul>
+                            </nav>
+                          </div>
+<pre>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li <span class="example-select">aria-current="page"</span>&gt;
+      &lt;span&gt;<span class="example-select">&lt;span class=&quot;visually-hidden&quot;&gt;Текущий пункт:&lt;/span&gt;</span>Шапки, шарфы, варежки&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Цены&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}</pre>
+                        </div>
+
+                        <p>
+                          Если есть выпадающее меню, добавьте к родительскому пункту атрибут <code class="block-inline">aria-haspopup="true"</code>.
+                        </p>
+
+                        <div>Добавьте к&nbsp;элементам меню атрибут role со&nbsp;значениями:</div>
+
+                        <ul class="list-none padding-bottom-10">
+                          <li><code>menubar</code>&nbsp;&mdash; горизонтальная панель меню;</li>
+                          <li><code>menu</code>&nbsp;&mdash; меню второго уровня;</li>
+                          <li><code>menuitem</code>&nbsp;&mdash; отдельный пункт меню.</li>
+                          <li><code>separator</code>&nbsp;&mdash; разделитель между двумя группами элементов меню.</li>
+                        </ul>
+
+                        <p>
+                          Чтобы настроить фокус на&nbsp;пункты меню с&nbsp;помощью клавиатуры, присвойте
+                          атрибут <code>tabindex="-1"</code>. Первому элементу главного меню (&laquo;Шапки, шарфы,
+                          варежки&raquo; в&nbsp;примере выше) добавьте значение <code>tabindex="0"</code>.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div id="nav-uniformity">
+                      <h3>Единообразие</h3>
+                      <p>
+                        Не&nbsp;меняйте последовательность навигационных элементов, которые повторяются на&nbsp;всех страницах сайта.
+                        Назовите похожие по&nbsp;функционалу элементы страницы одинаково.
+                      </p>
+                    </div>
+
+                    <div id="nav-current">
+                      <h3>Текущая страница</h3>
+                      <p>Добавьте на&nbsp;странице хлебные крошки или карту сайта, чтобы показать, где находится пользователь относительно других страниц сайта.</p>
+                    </div>
+                  </div>
+                  <!-- /Навигация -->
+
+                  <!-- Управление с клавиатуры -->
+                  <div class="parent-box" id="parent-keyboard">
+
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Управление с&nbsp;клавиатуры
+                    </div>
+                    <div id="keyboard">
+                      <h2 class="xm-none">Управление с&nbsp;клавиатуры</h2>
+
+                      <p class="intro-text">
+                        Дайте пользователю возможность управлять сайтом с&nbsp;клавиатуры без ограничений по&nbsp;времени
+                        на&nbsp;нажатие клавиши. Это поможет пользователям, которые не&nbsp;могут пользоваться мышкой,
+                        работать со&nbsp;страницей без&nbsp;препятствий&nbsp;— листать страницу, переходить по&nbsp;ссылкам, заполнять формы.
+                      </p>
+                      <p class="intro-text">
+                        Рекомендация не&nbsp;относится к&nbsp;случаям, когда управления с&nbsp;клавиатуры
+                        невозможно. Например, при&nbsp;рисовании. Управление с&nbsp;клавиатуры не&nbsp;должно мешать управлению мышью.
+                      </p>
+                      <p>
+                        Обеспечьте правильную последовательность перехода фокуса&nbsp;&mdash; проверьте семантику верстки,
+                        правильную последовательность содержимого на&nbsp;странице и&nbsp;добавьте визуальное отображение
+                        фокуса на&nbsp;активных элементах. Переход на&nbsp;следующий элемент&nbsp;&mdash; одно нажатие
+                        на&nbsp;клавишу Tab, на&nbsp;предыдущий&nbsp;&mdash; Shift+Tab. Если программно заданы другие
+                        клавиши, укажите это в&nbsp;начале сайте.
+                      </p>
+
+                      <p>
+                        WGAC 2.0 рекомендует использовать атрибут <code>tabindex</code>&nbsp;&mdash; заполнить его положительными числами
+                        в&nbsp;порядке возрастания. Мы&nbsp;не&nbsp;рекомендуем использовать <code>tabindex</code> для всех элементов.
+                        Если на&nbsp;странице появятся новые элементы, легко запутаться в&nbsp;установленных значениях.
+                      </p>
+
+                      <p>
+                        Полагайтесь на&nbsp;естественный порядок элементов на&nbsp;странице. Используйте <code>tabindex</code> для&nbsp;элементов только
+                        в&nbsp;специальных случаях, когда важна нестандартная последовательность. Используйте <code>tabindex="-1"</code>,
+                        чтобы&nbsp;пропустить элемент, и&nbsp;<code>tabindex="0"</code>,
+                        чтобы&nbsp;элемент получил фокус. Сделайте визуальное выделение активного элемента с&nbsp;помощью
+                        псевдокласса :focus для&nbsp;ссылок, кнопок, полей ввода:
+                      </p>
+
+                      <div class="example">
+                        <h5>Пример</h5>
+                        <div class="padding-bottom-20">
+                          <p>
+                            <label for="example-9-input-mail" iid="example-9-label-mail" class="example-label">Электронная почта</label>
+                            <input  id="example-9-input-mail" type="email" aria-labelledby="example-9-label-mail" class="textbox width-40" aria-required="true" tabindex="0">
+                          </p>
+
+                          <p>
+                            <label for="example-9-input-phone" id="example-9-label-phone" class="example-label">Телефон</label>
+                            <input id="example-9-input-phone" type="email" aria-labelledby="example-9-label-phone" class="textbox width-40" aria-required="true">
+                          </p>
+                        </div>
+                        <div>
+<pre>&lt;label id="label-mail"&gt;Электронная почта&lt;/label&gt;
+&lt;input type="email" <nobr>aria-labelledby="label-mail"</nobr> <nobr>aria-required="true"</nobr> <span class="example-select">tabindex="0"</span>&gt;
+
+&lt;label id="label-phone"&gt;Телефон&lt;/label&gt;
+&lt;input type="email" <nobr>aria-labelledby="label-phone"</nobr> <nobr>aria-required="true"</nobr> &gt;</pre>
+                        </div>
+                      </div>
+
+                      <p>
+                        Избегайте обработчиков <code>mousedown</code> или <code>mouseup</code>, потому что они
+                        недоступны для клавиатуры. Если это невозможно, добавьте обработку событий клавиатуры.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Управление с клавиатуры -->
+
+                  <!-- Опасные для здоровья -->
+                  <div class="parent-box" id="parent-health" style="margin-bottom: 86px">
+                    <div class="sticky-title js-sticky-title xs-none xl-none">
+                      Безопасность для&nbsp;здоровья
+                    </div>
+                    <div id="health">
+                      <h2 class="xm-none">Безопасность для&nbsp;здоровья</h2>
+
+                      <p>
+                        Не&nbsp;используйте заведомо опасные элементы дизайна, которые вспыхивают более 3&nbsp;раз в&nbsp;секунду.
+                        Например, видеоклип или анимированное изображение серии вспышек стробоскопа или крупного плана быстрой
+                        стрельбы. Это убережет людей со&nbsp;светочувствительностью от приступов болезни.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Опасные для здоровья -->
+
+                </div>
+              </main>
+            </div>
+
+            <div class="width-20 col empty-col">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="icon-phone" viewBox="0 0 485.213 485.212">
+      <g>
+        <path d="M242.607,0C108.629,0,0.001,108.628,0.001,242.606c0,133.976,108.628,242.606,242.606,242.606
+      		c133.978,0,242.604-108.631,242.604-242.606C485.212,108.628,376.585,0,242.607,0z M370.719,353.989l-19.425,19.429
+      		c-3.468,3.463-13.623,5.624-13.949,5.624c-61.452,0.536-120.621-23.602-164.095-67.08c-43.593-43.618-67.759-102.998-67.11-164.657
+      		c0-0.028,2.224-9.892,5.689-13.324l19.424-19.427c7.108-7.141,20.762-10.368,30.327-7.168l4.086,1.363
+      		c9.537,3.197,19.55,13.742,22.185,23.457l9.771,35.862c2.635,9.743-0.919,23.604-8.025,30.712l-12.97,12.972
+      		c12.734,47.142,49.723,84.138,96.873,96.903l12.965-12.975c7.141-7.141,20.997-10.692,30.719-8.061l35.857,9.806
+      		c9.717,2.67,20.26,12.62,23.456,22.154l1.363,4.145C381.028,333.262,377.826,346.913,370.719,353.989z"/>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+      <g>
+      </g>
+    </symbol>
+  </svg>
+
+</body>
+</html>
