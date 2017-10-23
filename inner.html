@@ -682,7 +682,7 @@
 
                         <p>
                           Добавьте названия ко&nbsp;всем полям ввода на&nbsp;форме, включая радиокнопки,
-                          чекбоксы, выпадающие списки. Название должно кратким и&nbsp;отображать назначение поля.
+                          чекбоксы, выпадающие списки. Название должно быть кратким и&nbsp;отражать назначение поля.
                         </p>
 
                         <p>
@@ -983,7 +983,7 @@
                           <p class="txt-danger" id="label-mail6">Неправильный формат электронной почты</p>
                           <p>
                             <label for="example-7-input-mail" id="example-7-label-mail" class="example-label" >Электронная почта</label>
-                            <input id="example-7-input-mail" type="email" aria-labelledby="example-7-label-mail" class="textbox width-40" aria-required="true" value="suhoverhova.an">
+                            <input id="example-7-input-mail" type="email" aria-describedby="example-7-label-mail" class="textbox width-40" aria-required="true" value="suhoverhova.an">
                           </p>
 
                           <p>
@@ -996,7 +996,7 @@
 <pre>&lt;p class=&quot;txt-danger&quot; <span class="example-select">id=&quot;danger-mail&quot;</span>&gt;Неправильный формат электронной почты&lt;/p&gt;
 &lt;p&gt;
   &lt;label for="input-mail"&gt;Электронная почта&lt;/label&gt;
-  &lt;input type=&quot;email&quot; id="input-mail" <span class="example-select">aria-labelledby=&quot;danger-mail&quot;</span> class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;
+  &lt;input type=&quot;email&quot; id="input-mail" <span class="example-select">aria-describedby=&quot;danger-mail&quot;</span> class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;
 &lt;/p&gt;
 &lt;p&gt;
   &lt;label for="input-phone"&gt;Телефон&lt;/label&gt;
@@ -1036,9 +1036,9 @@
                         <div class="padding-bottom-20">
                           <p>
                             <label for="example-8-input-mail" id="example-8-label-mail" class="example-label">Электронная почта</label>
-                            <input id="example-8-input-mail" aria-labelledby="example-8-label-mail" type="email" class="textbox width-40" aria-required="true" value="suhoverhova.an"><br/>
+                            <input id="example-8-input-mail" aria-labelledby="example-8-label-mail,example-8-error-message-mail" type="email" class="textbox width-40" aria-required="true" value="suhoverhova.an"><br/>
                             <label class="example-label xm-none" style="opacity: 0">Электронная почта</label>
-                            <span class="txt-danger" id="example-8-label-mail"><small>Неправильный формат</small></span>
+                            <span class="txt-danger" id="example-8-error-message-mail"><small>Неправильный формат</small></span>
                           </p>
 
                           <p>
@@ -1050,8 +1050,8 @@
                         <div>
 <pre>[...]
 &lt;label for="input-mail" id=&quot;label-mail&quot;&gt;Электронная почта&lt;/label&gt;
-&lt;input type=&quot;email&quot; id="input-mail" aria-describedby=&quot;label-mail&quot; class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;
-&lt;small <span class="example-select">aria-live=&quot;polite&quot;</span> id=&quot;label-mail&quot;&gt;Неправильный формат электронной почты&lt;/small&gt;
+&lt;input type=&quot;email&quot; id="input-mail" aria-describedby=&quot;label-mail,error-message-mail&quot; class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;
+&lt;small <span class="example-select">aria-live=&quot;polite&quot;</span> id=&quot;label-mail,error-message-mail&quot;&gt;Неправильный формат электронной почты&lt;/small&gt;
 [...]</pre>
                         </div>
                       </div>
