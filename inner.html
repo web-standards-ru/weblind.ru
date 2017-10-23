@@ -1141,9 +1141,7 @@
                         <div>
 <pre>&lt;thead&gt;
   &lt;tr&gt;
-    &lt;th <span class="example-select">scope="col"</span>&gt;Фамилия&lt;/th&gt;
-    &lt;th <span class="example-select">scope="col"</span>&gt;Имя&lt;/th&gt;
-    &lt;th <span class="example-select">scope="col"</span>&gt;Отчество&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;ФИО&lt;/th&gt;
     &lt;th <span class="example-select">scope="col"</span>&gt;Возраст&lt;/th&gt;
     &lt;th <span class="example-select">scope="col"</span>&gt;Профессия&lt;/th&gt;
   &lt;/tr&gt;
@@ -1163,6 +1161,7 @@
                               <caption>Участники проекта «Курьер»</caption>
 
                               <colgroup>
+                                <col>
                                 <col style="width: 50%;">
                                 <col>
                                 <col>
@@ -1170,6 +1169,7 @@
 
                               <thead>
                               <tr>
+                                <th scope="col">№ строки</th>
                                 <th scope="col">ФИО</th>
                                 <th scope="col">Возраст</th>
                                 <th scope="col">Профессия</th>
@@ -1178,16 +1178,19 @@
 
                               <tbody>
                               <tr>
+                                <td scope="row">1</td>
                                 <td>Иванов Александр Александрович</td>
                                 <td>23 года</td>
                                 <td>Врач</td>
                               </tr>
                               <tr>
+                                <td scope="row">2</td>
                                 <td>Китаева Анна Сергеевна</td>
                                 <td>34 года</td>
                                 <td>Учитель</td>
                               </tr>
                               <tr>
+                                <td scope="row">3</td>
                                 <td>Колосова Александра Ивановна</td>
                                 <td>32 года</td>
                                 <td>Программист</td>
@@ -1200,13 +1203,20 @@
 <pre><span class="example-select">&lt;caption&gt;Расписание работы магазина&lt;/caption&gt;</span>
 &lt;thead&gt;
   &lt;tr&gt;
-    &lt;th <span class="example-select">scope="col"</span>&gt;Фамилия&lt;/th&gt;
-    &lt;th <span class="example-select">scope="col"</span>&gt;Имя&lt;/th&gt;
-    &lt;th <span class="example-select">scope="col"</span>&gt;Отчество&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;№ строки&lt;/th&gt;
+    &lt;th <span class="example-select">scope="col"</span>&gt;ФИО&lt;/th&gt;
     &lt;th <span class="example-select">scope="col"</span>&gt;Возраст&lt;/th&gt;
     &lt;th <span class="example-select">scope="col"</span>&gt;Профессия&lt;/th&gt;
   &lt;/tr&gt;
-&lt;/thead&gt;</pre>
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;th <span class="example-select">scope="row"</span>&gt;1&lt;/th&gt;
+    &lt;th&gt;Иванов Александр Александрович&lt;/th&gt;
+    &lt;th&gt;23 года&lt;/th&gt;
+    &lt;th&gt;Врач&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;</pre>
                           </div>
                         </div>
 
