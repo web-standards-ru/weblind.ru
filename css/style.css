@@ -248,8 +248,8 @@ header {
 ----------------------------------------------------------------------------- */
 .textbox {
   text-indent: .9rem;
-  line-height: 2rem;
-  padding: .5rem 0;
+  line-height: 1.4;
+  padding: .6rem 0 .5rem;
   border: 1px solid #e5e5e5;
   display: inline-block;
   vertical-align: middle;
