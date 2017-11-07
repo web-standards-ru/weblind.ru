@@ -105,7 +105,7 @@ table td {vertical-align: top;}
 code {white-space: pre-wrap;}
 
 pre, code, .txt-monospace {
-  font-family: Monaco, Consolas, "Courier New", monospase;
+  font-family: Monaco, Consolas, "Courier New", monospace;
 }
 
 .subtitle,

@@ -7,7 +7,7 @@ nav li,
   position: relative;
 }
 
-nav ul
+nav ul,
 [class*="level-"],
 [class*="level-"] > a,
 [class*="level-"] > span {
