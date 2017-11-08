@@ -30,7 +30,7 @@
 }
 
 .txt-red     {color: #fb3347;}
-.font-light  {font-family: "HelveticaLight", Arial, sans-serif;}
+.font-light  {font-weight: 300;}
 
 .items .item {margin-bottom: 2rem;}
 .items .item-halb {margin-bottom: 1.3rem;}
@@ -58,7 +58,7 @@ a:focus {
 /* Layout
 ----------------------------------------------------------------------------- */
 body {
-  font-family: 'HelveticaRegular', Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 2.2rem;
   -webkit-overflow-scrolling: touch;
@@ -82,9 +82,8 @@ body {
 
 /* Main text
 ----------------------------------------------------------------------------- */
-h1, h3, h4, h5, strong {
-  font-family: 'HelveticaBold', Arial, sans-serif;
-  font-weight: 400;
+h1, h3, h4, h5 {
+  font-weight: 700;
 }
 
 h1 {
@@ -144,7 +143,7 @@ header {
   font-size: 8rem;
   line-height: 7rem;
   letter-spacing: 1px;
-  font-family: 'HelveticaBold', Arial, sans-serif;
+  font-weight: 700;
   word-spacing: -5px;
 }
 
@@ -254,7 +253,7 @@ header {
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  font-family: 'HelveticaRegular', Arial, sans-serif;
+  font-weight: 400;
   font-size: 1.6rem;
 }
 
@@ -269,7 +268,7 @@ header {
   font-size: 2rem;
   line-height: 2.6rem;
   margin-bottom: 3rem;
-  font-family: "HelveticaLight", Arial, sans-serif;
+  font-weight: 300;
 }
 
 .code-box .left:first-child {padding-right: 2rem;}
