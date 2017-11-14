@@ -1,5 +1,5 @@
 'use strict'
-document.addEventListener('DOMContentLoaded', function(){
+;document.addEventListener('DOMContentLoaded', function(){
   let topMenu = $('#vertical-menu'),
     header = $('header'),
     sidebar = $('#sidebar > div.js-sidebar-fixed'),
