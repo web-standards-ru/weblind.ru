@@ -4,9 +4,12 @@ const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const postcss = require('gulp-postcss');
 const sync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const useref = require('gulp-useref');
 
 gulp.task('html', () => {
   return gulp.src('src/*.html')
+    .pipe(useref())
     .pipe(htmlmin({
       removeComments: true,
       collapseWhitespace: true
@@ -19,6 +22,7 @@ gulp.task('css', () => {
   return gulp.src('src/css/*.css')
     .pipe(postcss([autoprefixer]))
     .pipe(csso())
+    .pipe(concat('style.min.css'))
     .pipe(gulp.dest('dest/css'))
     .pipe(sync.stream());
 });
