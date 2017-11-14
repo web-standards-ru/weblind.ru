@@ -468,7 +468,7 @@ body.mobile-menu-hidden {overflow: hidden;}
 }
 
 .i-close {
-  background: url(../images/i-close.png) 0 0 no-repeat;
+  background: url(../images/icon-close.png) 0 0 no-repeat;
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
@@ -476,7 +476,7 @@ body.mobile-menu-hidden {overflow: hidden;}
 }
 
 .i-menu {
-  background: url(../images/i-menu.png) 0 0 no-repeat;
+  background: url(../images/icon-menu.png) 0 0 no-repeat;
   background-size: 32px 32px;
   width: 32px;
   height: 32px;
