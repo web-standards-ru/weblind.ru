@@ -6,7 +6,7 @@ const postcss = require('gulp-postcss');
 const sync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const replace = require('gulp-html-replace');
-const minify = require('gulp-minify');
+const uglify = require('gulp-uglify');
 
 // HTML
 
@@ -48,9 +48,7 @@ gulp.task('css', () => {
 
 gulp.task('js:index', () => {
   return gulp.src('src/js/index.js')
-    .pipe(minify({
-      noSource: true
-    }))
+    .pipe(uglify())
     .pipe(gulp.dest('dest/js'))
 });
 
@@ -61,9 +59,7 @@ gulp.task('js:inner', () => {
       'src/js/jquery.js',
       'src/js/inner.js'
     ])
-    .pipe(minify({
-      noSource: true
-    }))
+    .pipe(uglify())
     .pipe(concat('inner.js'))
     .pipe(gulp.dest('dest/js'))
 });
@@ -129,15 +125,19 @@ gulp.task('watch', gulp.parallel(
   'watch:copy'
 ));
 
+// Build
+
+gulp.task('build', gulp.parallel(
+  'html',
+  'css',
+  'js',
+  'copy'
+));
+
 // Default
 
 gulp.task('default', gulp.series(
-  gulp.parallel(
-    'html',
-    'css',
-    'js',
-    'copy'
-  ),
+  'build',
   gulp.parallel(
     'watch',
     'server'
