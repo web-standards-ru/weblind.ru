@@ -75,7 +75,8 @@ gulp.task('js', gulp.series(
 gulp.task('copy', () => {
   return gulp.src([
       'src/fonts/*',
-      'src/images/*'
+      'src/images/*',
+      'src/pictures/*'
     ], {
       base: 'src'
     })
@@ -114,7 +115,8 @@ gulp.task('watch:js', () => {
 gulp.task('watch:copy', () => {
     return gulp.watch([
       'src/fonts/*',
-      'src/images/*'
+      'src/images/*',
+      'src/pictures/*'
     ], gulp.series('copy'));
 });
 
