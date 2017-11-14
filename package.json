@@ -10,7 +10,8 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.0",
-    "gulp-htmlmin": "^3.0.0",
+    "gulp-html-minify": "0.0.14",
+    "gulp-minify": "^2.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-useref": "^3.1.3"
   }
