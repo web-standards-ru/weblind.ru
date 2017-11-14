@@ -14,7 +14,8 @@ gulp.task('html:concat', () => {
   return gulp.src('src/*.html')
     .pipe(replace({
       'css': 'css/style.css',
-      'js': 'js/inner.js'
+      'js-index': 'js/index.js',
+      'js-inner': 'js/inner.js'
     }))
     .pipe(gulp.dest('dest'))
     .pipe(sync.stream());
