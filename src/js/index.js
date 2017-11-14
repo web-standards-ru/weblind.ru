@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 document.addEventListener('DOMContentLoaded', function() {
   // Открываем и закрываем меню в мобильной версиии
-  let mobileMenuBox = document.querySelector('.mobile-menu-box');
+  var mobileMenuBox = document.querySelector('.mobile-menu-box');
   document.querySelector('.open-menu-btn').onclick = function (e) {
     e.preventDefault();
     mobileMenuBox.classList.remove('close');

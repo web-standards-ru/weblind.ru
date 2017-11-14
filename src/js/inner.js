@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 ;document.addEventListener('DOMContentLoaded', function(){
-  let topMenu = $('#vertical-menu'),
+  var topMenu = $('#vertical-menu'),
     header = $('header'),
     sidebar = $('#sidebar > div.js-sidebar-fixed'),
     sidebarWidth = sidebar.width(),
@@ -18,15 +18,15 @@
     stickyBlock.length !==0 ? stickyBlock.css('left', (stickyContainer.offset().left + 20)) : '';
 
   // адаптирует уровень прокрутки меню, если активный пункт за пределами видимости
-  let adaptMenu = function (activeMenuItem) {
+  var adaptMenu = function (activeMenuItem) {
     if(!topMenu.offset() || preventScrollAdaptWhenClickLink) return;
     if(activeMenuItem.length === 0) {
       activeMenuItem = $('.sidebar-scroll a[href="' + window.location.hash + '"]')
     }
-      let lowerVisibilityBorder = topMenu.offset().top + topMenu.parent().parent().scrollTop() + $(window).height() - activeMenuItem.height(),
+      var lowerVisibilityBorder = topMenu.offset().top + topMenu.parent().parent().scrollTop() + $(window).height() - activeMenuItem.height(),
         upperVisibilityBorder = topMenu.offset().top + topMenu.parent().parent().scrollTop() + activeMenuItem.height();
     if (lowerVisibilityBorder < activeMenuItem.offset().top) {
-      let howFarIsActiveMenuItem = activeMenuItem.offset().top - lowerVisibilityBorder;
+      var howFarIsActiveMenuItem = activeMenuItem.offset().top - lowerVisibilityBorder;
       topMenu.parent().parent().stop().animate({
         scrollTop: topMenu.parent().parent().scrollTop() + howFarIsActiveMenuItem + $(window).height() / 2
       });
@@ -75,7 +75,7 @@
 
     $('body').removeClass('mobile-menu-hidden');
 
-    let href = $(this).attr('href'),
+    var href = $(this).attr('href'),
       offsetTop = href === "#" ? 0 : $(href).offset().top,
       menuOffsetAttr = $(this).attr('data-id'),
       stickyTitle = $(href).parent('.parent-box').children('.js-sticky-title');
@@ -93,7 +93,7 @@
 
     // в мобильной версии добавляем нижний бордер для sticky, когда он прилипает к верху окна
     $(window).scroll(function() {
-      let mobileH2Top = $('.js-sticky-title').offset().top,
+      var mobileH2Top = $('.js-sticky-title').offset().top,
         windowTop = $(window).scrollTop();
 
       if (mobileH2Top > windowTop) {
@@ -106,21 +106,21 @@
     setTimeout(function () {
       $('.mobile-menu a[href="' + window.location.hash + '"]').trigger('click')
     }, 300);
-    let block = window.location.hash.split('-');
-    let block2 = block[0].slice(1);
+    var block = window.location.hash.split('-');
+    var block2 = block[0].slice(1);
 
     if (block2 === 'parent') {
       block2 = block[1];
     }
 
-    let href = '#parent-' + block2,
+    var href = '#parent-' + block2,
       stickyTitle = $(href).children('.js-sticky-title'),
       hrefTop;
 
     if ($(href).offset()) {
       hrefTop = $(href).offset().top;
     }
-    let windowTop = $(window).scrollTop();
+    var windowTop = $(window).scrollTop();
 
     if (windowTop > hrefTop) {
       $('.js-sticky-title').removeClass('border');
@@ -158,7 +158,7 @@
   sidebarClientWidth = $('.sidebar-scroll').prop("clientWidth");
 
   // Закрепляем почту и лого вверху и внизу
-  let headerOffsetLeft = $('header .logo-text').offset().left;
+  var headerOffsetLeft = $('header .logo-text').offset().left;
 
   $('.js-logo-fixed').css('right', headerOffsetLeft);
   $('.js-link-fixed').css('right', headerOffsetLeft);
@@ -168,7 +168,7 @@
     $('.js-logo-fixed').css('right', headerOffsetLeft);
     $('.js-link-fixed').css('right', headerOffsetLeft);
 
-      let stickyBlock = $('.js-sidebar-fixed'),
+      var stickyBlock = $('.js-sidebar-fixed'),
         stickyContainer = $('div.js-sidebar-fixed-container');
     if (stickyContainer && stickyContainer.offset()) {
       stickyBlock.css('left', stickyContainer.offset().left + 20);
@@ -179,7 +179,7 @@
   });
 
   topMenu.find("li a").click(function(e) {
-    let href = $(this).attr("href"),
+    var href = $(this).attr("href"),
       offsetTop = href === "#" ? 0 : $(href).offset().top;
       offsetTop = offsetTop - 30;
     $('#vertical-menu ul li').removeClass("active");
@@ -206,7 +206,7 @@
 
   $(window).scroll(function(event) {
     activeMenuItem = $('.sidebar-scroll li.active');
-    let positionTop = $(this).scrollTop();
+    var positionTop = $(this).scrollTop();
 
     // отменяем прокрутку всей страници при прокрутке меню колёсиком
     if (wheelEventHappened) {
@@ -225,7 +225,7 @@
 
   });
 
-  let verticalMenuAdaptToHeader = function () {
+  var verticalMenuAdaptToHeader = function () {
     if ($(window).scrollTop() < header.outerHeight()) {
       topMenu.parent().parent().css('top', header.outerHeight() + 47 - $(window).scrollTop())
     } else {
@@ -246,19 +246,19 @@
       }, 100)
     });
   }
-  let wheelTimer;
-  let wheelEventHappened = false;
-  let prevWindowScrollTop = $(window).scrollTop();
-  let currentUrlState;
-  let updateUrlAndAdoptMenuCalled = false;
-  let updateUrlAndAdoptMenuTimer;
+  var wheelTimer;
+  var wheelEventHappened = false;
+  var prevWindowScrollTop = $(window).scrollTop();
+  var currentUrlState;
+  var updateUrlAndAdoptMenuCalled = false;
+  var updateUrlAndAdoptMenuTimer;
 
   function onScroll(event, positionTop){
-    let scrollPos = $(document).scrollTop();
+    var scrollPos = $(document).scrollTop();
     $('#vertical-menu a').each(function () {
-      let currLink = $(this);
-      let refElement = $(currLink.attr("href"));
-      let refElementId = refElement.attr("id");
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      var refElementId = refElement.attr("id");
 
       if (refElement.position().top - 40 <= scrollPos && refElement.position().top + refElement.height() >= scrollPos) {
         if (scrollPos / $(document).height() * 100 > 95) {
@@ -268,7 +268,7 @@
           }
           if (currentUrlState !== 'health') {
             currentUrlState = 'health';
-            let updateUrlAndAdoptMenu = function (refElementId) {
+            var updateUrlAndAdoptMenu = function (refElementId) {
               clearTimeout(updateUrlAndAdoptMenuTimer);
               updateUrlAndAdoptMenuCalled = true;
               updateUrlAndAdoptMenuTimer = setTimeout(function () {
@@ -286,7 +286,7 @@
           }
           if (currentUrlState !== refElementId) {
             currentUrlState = refElementId;
-            let updateUrlAndAdoptMenu = function (refElementId) {
+            var updateUrlAndAdoptMenu = function (refElementId) {
               clearTimeout(updateUrlAndAdoptMenuTimer);
               updateUrlAndAdoptMenuCalled = true;
               updateUrlAndAdoptMenuTimer = setTimeout(function () {
@@ -304,20 +304,20 @@
   }
 
   hoveredSidebarClientWidth = sidebarClientWidth - 17;
-  let sidebarHandlerIn = function () {
+  var sidebarHandlerIn = function () {
     sidebar.css('overflow', 'auto');
     sidebar.css('padding-right', '2rem');
-    let currentPaddingRight = +$(".sidebar-scroll").css('padding-right').slice(0, -2);
+    var currentPaddingRight = +$(".sidebar-scroll").css('padding-right').slice(0, -2);
     hoveredSidebarClientWidth = $(".sidebar-scroll").prop("clientWidth");
     $(".sidebar-scroll").css('padding-right', currentPaddingRight - (sidebarClientWidth - hoveredSidebarClientWidth) + 'px');
     clearTimeout(timerToHideScrollbar);
 
   };
 
-  let sidebarHandlerOut = function () {
+  var sidebarHandlerOut = function () {
     sidebar.css('overflow', 'hidden');
     sidebar.css('padding-right', '0');
-    let currentPaddingRight = +$(".sidebar-scroll").css('padding-right').slice(0, -2);
+    var currentPaddingRight = +$(".sidebar-scroll").css('padding-right').slice(0, -2);
     $(".sidebar-scroll").css('padding-right', currentPaddingRight + (sidebarClientWidth - hoveredSidebarClientWidth) + 'px');
   };
 
@@ -327,7 +327,7 @@
   sidebar.trigger('mouseleave');
 
   // Для корректной работы кнопки "назад" в браузере
-  let prevHistoryState;
+  var prevHistoryState;
   window.onpopstate = function () {
     if (!window.history.state) {
       window.location.href = '/'
