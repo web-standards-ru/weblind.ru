@@ -102,16 +102,6 @@ gulp.task('server', () => {
 
 // Watch
 
-// gulp.task('watch', () => {
-//   gulp.watch('src/*.html', gulp.series('html'));
-//   gulp.watch('src/css/*.css', gulp.series('css'));
-//   gulp.watch('src/js/*.js', gulp.series('js'))
-//   gulp.watch([
-//     'src/fonts/*',
-//     'src/images/*'
-//   ], gulp.series('copy'));
-// });
-
 gulp.task('watch:html', () => {
     return gulp.watch('src/*.html', gulp.series('html'));
 });
