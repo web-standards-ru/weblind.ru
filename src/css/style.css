@@ -213,8 +213,8 @@ header {
 
 .logo-img {
     background: url(../images/logo.svg) 0 0 no-repeat;
-    background-size: 252px 57px;
-    width: 126px;
+    background-size: 248px 57px;
+    width: 124px;
     height: 57px;
     margin-top: 5px;
 }
@@ -229,7 +229,7 @@ header {
 }
 
 .logo-link:hover .logo-img {
-    background-position: right 0;
+    background-position: -124px 0;
 }
 
 
@@ -464,7 +464,7 @@ ul.list-none li {
 ----------------------------------------------------------------------------- */
 
 .weblind-box {
-    width: 166px;
+    width: 165px;
 }
 
 .weblind-item {
