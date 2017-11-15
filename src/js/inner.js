@@ -343,4 +343,54 @@ document.addEventListener('DOMContentLoaded', function(){
     adaptMenu(sidebar.find('#vertical-menu a[href="' + window.location.hash + '"]').parent())
   }, 500)
 
+  // Iframe video lazy loading
+  setupVideoPreload()
+
+  function setupVideoPreload () {
+    let videoElements = document.querySelectorAll('.video')
+
+    for (let i = 0; i < videoElements.length; i++) {
+      preloadVideo(videoElements[i])
+    }
+  }
+
+  function preloadVideo (videoElement) {
+    let playButton = videoElement.querySelector('.video__button')
+    let cover = videoElement.querySelector('.video__media')
+    let videoId = parseCoverURL(cover)
+    let videoWrapper = videoElement.querySelector('.video__wrapper')
+
+    playButton.addEventListener('click', function () {
+      let iframe = makeIframe(videoId)
+
+      videoWrapper.innerHTML = ''
+      videoWrapper.appendChild(iframe)
+    })
+  }
+
+  function parseCoverURL (coverElement) {
+    let urlRegExp = /https:\/\/(i\.ytimg\.com\/vi_webp|img\.youtube\.com\/vi)\/([a-zA-Z0-9_-]+)\/(default|hqdefault|mqdefault|sddefault|maxresdefault)\.(jpg|webp)/i
+    let url = coverElement.src
+    let match = url.match(urlRegExp)
+
+    return match[2]
+  }
+
+  function makeIframe (videoId) {
+    let iframe = document.createElement('iframe')
+
+    iframe.setAttribute('frameborder', '0')
+    iframe.setAttribute('allowfullscreen', '')
+    iframe.setAttribute('src', generateIframeUrl(videoId))
+    iframe.classList.add('video__media')
+
+    return iframe
+  }
+
+  function generateIframeUrl (videoId) {
+    let query = '?rel=0&showinfo=0&autoplay=1'
+
+    return 'https://www.youtube.com/embed/' + videoId + query
+  }
+
 });
