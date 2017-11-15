@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 504 114" width="504" height="114">
+  <defs>
+    <clipPath id="_clipPath_XRREt0xnwJaTEQAINXKQrqX3ceoyq3f4">
+      <path d="M0 0h504v114H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#_clipPath_XRREt0xnwJaTEQAINXKQrqX3ceoyq3f4)" stroke-linecap="square" stroke-miterlimit="3">
+    <path d="M0 0h21.519v89.818h25.352V0h21.258v89.818h23.435V0H115v114H0V0z" vector-effect="non-scaling-stroke" stroke="#000"/>
+    <path d="M253 0h21.519v89.818h25.352V0h21.258v89.818h23.435V0H368v114H253V0z" fill="#FB3347" vector-effect="non-scaling-stroke" stroke="#FB3347"/>
+    <path d="M138 0v114h83.839c14.154-.119 23.892-10.866 29.161-32.3.029-8.853-2.954-17.029-9.113-24.7 6.075-2.533 9.131-10.114 9.113-22.8-2.43-19-12.132-30.381-29.161-34.2H138m25.516 22.8h58.323c10.167 4.265 9.292 22.353 0 22.8h-58.323V22.8M138 0zm25.516 67.968h58.323c10.167 4.266 9.292 22.354 0 22.8h-58.323v-22.8z" fill-rule="evenodd" vector-effect="non-scaling-stroke" stroke-width="1.861" stroke="#000"/>
+    <path d="M391 0v114h83.839c14.154-.119 23.892-10.866 29.161-32.3.029-8.853-2.954-17.029-9.113-24.7 6.075-2.533 9.131-10.114 9.113-22.8-2.43-19-12.132-30.381-29.161-34.2H391m25.516 22.8h58.323c10.167 4.265 9.292 22.353 0 22.8h-58.323V22.8M391 0zm25.516 67.968h58.323c10.167 4.266 9.292 22.354 0 22.8h-58.323v-22.8z" fill-rule="evenodd" fill="#FB3347" vector-effect="non-scaling-stroke" stroke-width="1.861" stroke="#FB3347"/>
+  </g>
+</svg>

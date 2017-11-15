@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 66 66" width="66" height="66">
+  <g id="icon-menu">
+    <path d="M1 26h64v14H1zm0 25h64v14H1z"/>
+    <path vector-effect="non-scaling-stroke" stroke="#000" stroke-linecap="square" stroke-miterlimit="3" d="M1 1h64v14H1z"/>
+  </g>
+</svg>
