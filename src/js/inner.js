@@ -347,21 +347,21 @@
   setupVideoPreload()
 
   function setupVideoPreload () {
-    let videoElements = document.querySelectorAll('.video')
+    var videoElements = document.querySelectorAll('.video')
 
-    for (let i = 0; i < videoElements.length; i++) {
+    for (var i = 0; i < videoElements.length; i++) {
       preloadVideo(videoElements[i])
     }
   }
 
   function preloadVideo (videoElement) {
-    let playButton = videoElement.querySelector('.video__button')
-    let cover = videoElement.querySelector('.video__media')
-    let videoId = parseCoverURL(cover)
-    let videoWrapper = videoElement.querySelector('.video__wrapper')
+    var playButton = videoElement.querySelector('.video__button')
+    var cover = videoElement.querySelector('.video__media')
+    var videoId = parseCoverURL(cover)
+    var videoWrapper = videoElement.querySelector('.video__wrapper')
 
     playButton.addEventListener('click', function () {
-      let iframe = makeIframe(videoId)
+      var iframe = makeIframe(videoId)
 
       videoWrapper.innerHTML = ''
       videoWrapper.appendChild(iframe)
@@ -369,15 +369,15 @@
   }
 
   function parseCoverURL (coverElement) {
-    let urlRegExp = /https:\/\/(i\.ytimg\.com\/vi_webp|img\.youtube\.com\/vi)\/([a-zA-Z0-9_-]+)\/(default|hqdefault|mqdefault|sddefault|maxresdefault)\.(jpg|webp)/i
-    let url = coverElement.src
-    let match = url.match(urlRegExp)
+    var urlRegExp = /https:\/\/(i\.ytimg\.com\/vi_webp|img\.youtube\.com\/vi)\/([a-zA-Z0-9_-]+)\/(default|hqdefault|mqdefault|sddefault|maxresdefault)\.(jpg|webp)/i
+    var url = coverElement.src
+    var match = url.match(urlRegExp)
 
     return match[2]
   }
 
   function makeIframe (videoId) {
-    let iframe = document.createElement('iframe')
+    var iframe = document.createElement('iframe')
 
     iframe.setAttribute('frameborder', '0')
     iframe.setAttribute('allowfullscreen', '')
@@ -388,7 +388,7 @@
   }
 
   function generateIframeUrl (videoId) {
-    let query = '?rel=0&showinfo=0&autoplay=1'
+    var query = '?rel=0&showinfo=0&autoplay=1'
 
     return 'https://www.youtube.com/embed/' + videoId + query
   }
