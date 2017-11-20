@@ -596,14 +596,6 @@ footer a,
   .xl-none {display: none;}
 }
 
-@media (min-width: 768px) {
-  /* Video */
-  .video__media--image {
-    top: -16.66%;
-    height: 133.33%;
-  }
-}
-
 /* Portrait tablet to landscape and desktop
 ----------------------------------------------------------------------------- */
 
