@@ -2,7 +2,10 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "test": "ls dest",
+    "pretest": "npm run build",
+    "deploy": "cd dest && rsync -az --delete --exclude=.DS_Store . web-standards.ru:/var/www/weblind.ru/html/"
   },
   "dependencies": {
     "autoprefixer": "^7.1.2",
