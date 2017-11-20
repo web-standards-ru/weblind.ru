@@ -343,4 +343,54 @@
     adaptMenu(sidebar.find('#vertical-menu a[href="' + window.location.hash + '"]').parent())
   }, 500)
 
+  // Iframe video lazy loading
+  setupVideoPreload()
+
+  function setupVideoPreload () {
+    var videoElements = document.querySelectorAll('.video')
+
+    for (var i = 0; i < videoElements.length; i++) {
+      preloadVideo(videoElements[i])
+    }
+  }
+
+  function preloadVideo (videoElement) {
+    var playButton = videoElement.querySelector('.video__button')
+    var cover = videoElement.querySelector('.video__media')
+    var videoId = parseCoverURL(cover)
+    var videoWrapper = videoElement.querySelector('.video__wrapper')
+
+    playButton.addEventListener('click', function () {
+      var iframe = makeIframe(videoId)
+
+      videoWrapper.innerHTML = ''
+      videoWrapper.appendChild(iframe)
+    })
+  }
+
+  function parseCoverURL (coverElement) {
+    var urlRegExp = /https:\/\/(i\.ytimg\.com\/vi_webp|img\.youtube\.com\/vi)\/([a-zA-Z0-9_-]+)\/(default|hqdefault|mqdefault|sddefault|maxresdefault)\.(jpg|webp)/i
+    var url = coverElement.src
+    var match = url.match(urlRegExp)
+
+    return match[2]
+  }
+
+  function makeIframe (videoId) {
+    var iframe = document.createElement('iframe')
+
+    iframe.setAttribute('frameborder', '0')
+    iframe.setAttribute('allowfullscreen', '')
+    iframe.setAttribute('src', generateIframeUrl(videoId))
+    iframe.classList.add('video__media')
+
+    return iframe
+  }
+
+  function generateIframeUrl (videoId) {
+    var query = '?rel=0&showinfo=0&autoplay=1'
+
+    return 'https://www.youtube.com/embed/' + videoId + query
+  }
+
 });
