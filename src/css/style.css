@@ -512,7 +512,10 @@ body.mobile-menu-hidden {overflow: hidden;}
 }
 
 .open-menu-btn,
-.close-menu-btn {border: none;}
+.close-menu-btn {
+  border: none;
+  background: none;
+}
 
 .mobile-menu-box .close-menu-btn {
   position: fixed;
@@ -529,16 +532,14 @@ body.mobile-menu-hidden {overflow: hidden;}
 }
 
 .i-close {
-  background: url(../images/icon-close.png) 0 0 no-repeat;
-  background-size: 32px 32px;
+  background: url(../images/icon-close.png) 0 0 / cover no-repeat;
   width: 32px;
   height: 32px;
   display: block;
 }
 
 .i-menu {
-  background: url(../images/icon-menu.png) 0 0 no-repeat;
-  background-size: 32px 32px;
+  background: url(../images/icon-menu.png) 0 0 / cover no-repeat;
   width: 32px;
   height: 32px;
   display: block;
