@@ -548,10 +548,12 @@ body.mobile-menu-hidden {overflow: hidden;}
 .mobile-menu-link {
   padding-top: 1rem;
   padding-bottom: 1.1rem;
-  -webkit-font-smoothing:subpixel-antialiased !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
 }
 
-.mobile-menu-link {-webkit-font-smoothing:subpixel-antialiased !important;}
+.mobile-menu-link {
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
 
 /* Expert box
 ----------------------------------------------------------------------------- */
@@ -562,7 +564,9 @@ body.mobile-menu-hidden {overflow: hidden;}
 .expert-item {
   display: inline-block;
 }
-.expert-item:last-child {margin-bottom: 0;}
+.expert-item:last-child {
+  margin-bottom: 0;
+}
 
 /* Footer
 ----------------------------------------------------------------------------- */
@@ -576,11 +580,11 @@ footer a,
 .link-fixed {
   font-size: 1.6rem;
   line-height: 1.3rem;
-  -webkit-font-smoothing:subpixel-antialiased !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
 }
 
 .link-fixed a {
-  -webkit-font-smoothing:subpixel-antialiased !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
 }
 
 .footer-cols.xl-none.xs-none {
@@ -630,11 +634,15 @@ footer a,
   .link-fixed {
     font-size: 1.4rem;
     line-height: 1.1rem;
-    -webkit-font-smoothing:subpixel-antialiased !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
   }
 
-  .link-fixed   {bottom: 2.3rem;}
-  .link-fixed a {-webkit-font-smoothing:subpixel-antialiased !important;}
+  .link-fixed   {
+    bottom: 2.3rem;
+  }
+  .link-fixed a {
+    -webkit-font-smoothing: subpixel-antialiased !important;
+  }
 
   /* Advice */
   .advice-item {padding-bottom: 4rem;}
@@ -793,10 +801,10 @@ footer a,
   .mobile-menu-link {
     padding-top: 1rem;
     padding-bottom: 1.1rem;
-    -webkit-font-smoothing:subpixel-antialiased !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
   }
   .mobile-menu-link a {
-    -webkit-font-smoothing:subpixel-antialiased !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
   }
 
 
