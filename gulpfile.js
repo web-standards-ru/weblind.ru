@@ -17,8 +17,7 @@ gulp.task('html:concat', () => {
       'js-index': 'js/index.js',
       'js-inner': 'js/inner.js'
     }))
-    .pipe(gulp.dest('dest'))
-    .pipe(sync.stream());
+    .pipe(gulp.dest('dest'));
 });
 
 gulp.task('html:clean', () => {
@@ -27,12 +26,16 @@ gulp.task('html:clean', () => {
       removeComments: true,
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest('dest'))
-    .pipe(sync.stream());
+    .pipe(gulp.dest('dest'));
 });
 
 gulp.task('html', gulp.series(
-  'html:concat', 'html:clean'
+  'html:concat', 'html:clean', () => {
+    return gulp.src('dest/*.html')
+      .pipe(sync.stream({
+        once: true
+      }));
+  }
 ));
 
 // CSS
