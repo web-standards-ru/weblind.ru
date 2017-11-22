@@ -30,8 +30,7 @@ gulp.task('html:clean', () => {
 });
 
 gulp.task('html', gulp.series(
-  'html:concat', 'html:clean',
-  () => {
+  'html:concat', 'html:clean', () => {
     return gulp.src('dest/*.html')
       .pipe(sync.stream({
         once: true
