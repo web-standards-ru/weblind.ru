@@ -591,9 +591,21 @@ footer a,
   padding-bottom: 1rem;
 }
 
-.footer-two-line {
-  padding-bottom: .8rem;
-  padding-top: .4rem;
+.footer-main-info {
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-main-info .col {
+  padding: 0 1rem;
+}
+
+.footer-main-info .footer-copyright,
+.footer-main-info .col a{
+  display: inline-block;
+  line-height: 1.2;
+  margin: 5px 0;
 }
 
 /* Large desktop
