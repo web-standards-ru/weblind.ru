@@ -1,20 +1,22 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Открываем и закрываем меню в мобильной версиии
   var mobileMenuBox = document.querySelector('.mobile-menu-box');
-  document.querySelector('.open-menu-btn').onclick = function (e) {
-    e.preventDefault();
+  var body = document.body;
+
+  document.querySelector('.open-menu-btn').onclick = function (event) {
+    event.preventDefault();
     mobileMenuBox.classList.remove('close');
     mobileMenuBox.classList.add('open');
     mobileMenuBox.style.opacity = 100;
-    document.body.classList.add('mobile-menu-hidden');
+    body.classList.add('mobile-menu-hidden');
   };
 
-  document.querySelector('.close-menu-btn').onclick = function (e) {
+  document.querySelector('.close-menu-btn').onclick = function (event) {
+    event.preventDefault();
     mobileMenuBox.style.opacity = 0;
     mobileMenuBox.classList.remove('open');
     mobileMenuBox.classList.add('close');
-    document.body.classList.remove('mobile-menu-hidden');
-    e.preventDefault();
+    body.classList.remove('mobile-menu-hidden');
   };
 });
