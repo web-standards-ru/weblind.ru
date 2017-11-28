@@ -1,6 +1,5 @@
 /* Navigation
 ----------------------------------------------------------------------------- Navigation */
-
 nav li,
 [class*="level-"] > a,
 [class*="level-"] > span {
@@ -14,28 +13,35 @@ nav ul,
   display: block;
 }
 
-[class*="level-"] > a {text-decoration: none;}
+[class*="level-"] > a {
+  text-decoration: none;
+}
 
 nav [class*="level-"].active {
   background-color: #f4f4f4;
   color: #0000fe;
 }
-nav [class*="level-"].active  > a {
+
+nav [class*="level-"].active > a {
   color: #000;
 }
 
-nav [class*="level-"].active  > a:hover {
+nav [class*="level-"].active > a:hover {
   cursor: default;
 }
 
 /* Horizontal menu
 ----------------------------------------------------------------------------- Vertical menu */
-
-.menu-h > li {float: left; border-radius: 5px; }
+.menu-h > li {
+  float: left;
+  border-radius: 5px;
+}
 
 .menu-h .level-1 > a,
 .menu-h .level-1 > div,
-.menu-h .level-1 > span {padding: .5rem 1rem;}
+.menu-h .level-1 > span {
+  padding: .5rem 1rem;
+}
 
 .menu-h.main {
   padding: .5rem 0;
@@ -45,37 +51,57 @@ nav [class*="level-"].active  > a:hover {
 /* List
 ----------------------------------------------------------------------------- List */
 
-ul, ol {list-style-position: outside;}
+ul, ol {
+  list-style-position: outside;
+}
 
-ul.list-item {list-style-type: disc;}
-ol.list-item {list-style-type: decimal-leading-zero;}
+ul.list-item {
+  list-style-type: disc;
+}
+
+ol.list-item {
+  list-style-type: decimal-leading-zero;
+}
 
 ul[class*="list"] ul,
-ol[class*="list"] ul {list-style-type: circle;}
+ol[class*="list"] ul {
+  list-style-type: circle;
+}
+
 ul[class*="list"] ol,
-ol[class*="list"] ol {list-style-type: lower-alpha;}
+ol[class*="list"] ol {
+  list-style-type: lower-alpha;
+}
 
 .list > dt,
 .list > dd,
-.list      > li,
-.list-item > li  {padding-top:    .3rem;}
-.list > dd,
-.list      > li,
-.list-item > li  {padding-bottom: .3rem;}
+.list > li,
+.list-item > li {
+  padding-top: .3rem;
+}
 
-.list-item {padding-left: 3rem;}
+.list > dd,
+.list > li,
+.list-item > li {
+  padding-bottom: .3rem;
+}
+
+.list-item {
+  padding-left: 3rem;
+}
 
 .menu-v {
   display: block;
   box-sizing: border-box;
   font-size: 1.3rem;
   line-height: 1.6rem;
-
   margin-bottom: 1.5rem;
 }
 
 .menu-v .level-1 > a,
-.menu-h .level-1 > a {border-bottom-color: transparent;}
+.menu-h .level-1 > a {
+  border-bottom-color: transparent;
+}
 
 .menu-v .level-1 > span,
 .menu-v .level-1 > a {
@@ -90,23 +116,65 @@ ol[class*="list"] ol {
   padding: .3rem 0 0 2rem;
 }
 
-[class*="list"] dt {float: left;}
+[class*="list"] dt {
+  float: left;
+}
 
-.w-10[class*="list"] dt {width:  9%;}
-.w-15[class*="list"] dt {width: 14%;}
-.w-20[class*="list"] dt {width: 19%;}
-.w-25[class*="list"] dt {width: 24%;}
-.w-30[class*="list"] dt {width: 29%;}
-.w-35[class*="list"] dt {width: 34%;}
-.w-40[class*="list"] dt {width: 39%;}
+.w-10[class*="list"] dt {
+  width: 9%;
+}
 
-.w-10[class*="list"] dd {padding-left: 10%;}
-.w-15[class*="list"] dd {padding-left: 15%;}
-.w-20[class*="list"] dd {padding-left: 20%;}
-.w-25[class*="list"] dd {padding-left: 25%;}
-.w-30[class*="list"] dd {padding-left: 30%;}
-.w-35[class*="list"] dd {padding-left: 35%;}
-.w-40[class*="list"] dd {padding-left: 40%;}
+.w-15[class*="list"] dt {
+  width: 14%;
+}
+
+.w-20[class*="list"] dt {
+  width: 19%;
+}
+
+.w-25[class*="list"] dt {
+  width: 24%;
+}
+
+.w-30[class*="list"] dt {
+  width: 29%;
+}
+
+.w-35[class*="list"] dt {
+  width: 34%;
+}
+
+.w-40[class*="list"] dt {
+  width: 39%;
+}
+
+.w-10[class*="list"] dd {
+  padding-left: 10%;
+}
+
+.w-15[class*="list"] dd {
+  padding-left: 15%;
+}
+
+.w-20[class*="list"] dd {
+  padding-left: 20%;
+}
+
+.w-25[class*="list"] dd {
+  padding-left: 25%;
+}
+
+.w-30[class*="list"] dd {
+  padding-left: 30%;
+}
+
+.w-35[class*="list"] dd {
+  padding-left: 35%;
+}
+
+.w-40[class*="list"] dd {
+  padding-left: 40%;
+}
 
 [class*="list"] dd:after {
   content: " ";
@@ -114,7 +182,7 @@ ol[class*="list"] ol {
   float: none !important;
   clear: both;
   height: 0;
-  margin:  0;
+  margin: 0;
   padding: 0;
   overflow: hidden;
 }
