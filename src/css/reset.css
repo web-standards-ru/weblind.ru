@@ -133,6 +133,8 @@ pre, code, .txt-monospace {
 .block       {display: block;}
 .block-inline{display: inline-block;}
 
+small        {font-size: 1.1rem;}
+
 .clear,
 nav:after,
 nav > ul:after {
