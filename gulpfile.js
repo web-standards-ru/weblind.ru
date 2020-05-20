@@ -17,21 +17,21 @@ gulp.task('html:concat', () => {
       'js-index': 'js/index.js',
       'js-inner': 'js/inner.js'
     }))
-    .pipe(gulp.dest('dest'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('html:clean', () => {
-  return gulp.src('dest/*.html')
+  return gulp.src('dist/*.html')
     .pipe(htmlmin({
       removeComments: true,
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest('dest'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('html', gulp.series(
   'html:concat', 'html:clean', () => {
-    return gulp.src('dest/*.html')
+    return gulp.src('dist/*.html')
       .pipe(sync.stream({
         once: true
       }));
@@ -45,14 +45,14 @@ gulp.task('css', () => {
     .pipe(postcss([autoprefixer]))
     .pipe(csso())
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('dest/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(sync.stream());
 });
 
 gulp.task('js:index', () => {
   return gulp.src('src/js/index.js')
     .pipe(uglify())
-    .pipe(gulp.dest('dest/js'))
+    .pipe(gulp.dest('dist/js'))
 });
 
 // JavaScript
@@ -64,7 +64,7 @@ gulp.task('js:inner', () => {
     ])
     .pipe(uglify())
     .pipe(concat('inner.js'))
-    .pipe(gulp.dest('dest/js'))
+    .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('js', gulp.series(
@@ -83,7 +83,7 @@ gulp.task('copy', () => {
     ], {
       base: 'src'
     })
-    .pipe(gulp.dest('dest'))
+    .pipe(gulp.dest('dist'))
     .pipe(sync.stream({
       once: true
     }));
@@ -96,7 +96,7 @@ gulp.task('server', () => {
     ui: false,
     notify: false,
     server: {
-      baseDir: 'dest'
+      baseDir: 'dist'
     }
   });
 });

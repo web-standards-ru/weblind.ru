@@ -2,20 +2,20 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
-    "test": "ls dest",
+    "test": "ls dist",
     "pretest": "npm run build",
-    "deploy": "cd dest && rsync -az --delete --exclude=.DS_Store . web-standards.ru:/var/www/weblind.ru/html/"
+    "build": "gulp build",
+    "deploy": "cd dist && rsync --archive --compress --delete . wst@web-standards.ru:/var/www/weblind.ru/html/"
   },
   "dependencies": {
-    "autoprefixer": "^7.1.2",
-    "browser-sync": "^2.18.2",
+    "autoprefixer": "^9.8.0",
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.0",
+    "gulp-csso": "^4.0.1",
     "gulp-html-replace": "^1.6.2",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-postcss": "^7.0.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
