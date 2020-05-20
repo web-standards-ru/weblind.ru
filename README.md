@@ -1,4 +1,5 @@
-# Веблайнд [![Build Status](https://travis-ci.org/web-standards-ru/weblind.ru.svg?branch=master)](https://travis-ci.org/web-standards-ru/weblind.ru)
+# Веблайнд
+[![](https://github.com/web-standards-ru/weblind.ru/workflows/Deploy/badge.svg)](https://github.com/web-standards-ru/weblind.ru/actions?query=workflow%3ADeploy)
 
 Рекомендации по разработке сайтов для людей с нарушениями зрения.
 

@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-chmod 600 ${TRAVIS_BUILD_DIR}/.travis/deploy_key
-mv ${TRAVIS_BUILD_DIR}/.travis/deploy_key ~/.ssh/id_rsa
-cat ${TRAVIS_BUILD_DIR}/.travis/ssh_config >> ~/.ssh/config
-
