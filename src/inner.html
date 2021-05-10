@@ -1604,8 +1604,8 @@
                         </p>
 
                         <p>
-                          Для текущего пункта меню удалите ссылку, добавьте невидимый текст «Текущий пункт:».
-                          Добавьте к текущему пункту меню атрибут <code>aria-current="page"</code>:
+                          Добавьте к текущему пункту меню атрибут <code>aria-current="page"</code>.
+                          В случае, если меню является пагинацией, вместо добавления атрибута удалите ссылку из элемента с номером текущей страницы.
                         </p>
 
                         <div class="example">
@@ -1613,7 +1613,7 @@
                           <div class="padding-bottom-20">
                             <nav>
                               <ul class="menu-h">
-                                <li class="level-1 active" aria-current="page"><span><span class="visually-hidden">Текущий пункт:</span>Шапки, шарфы, варежки</span></li>
+                                <li class="level-1 active" aria-current="page"><span><a href="#">Шапки, шарфы, варежки</a></span></li>
                                 <li class="level-1"><span><a href="#">Цены</a></span></li>
                                 <li class="level-1"><span><a href="#">Контакты</a></span></li>
                               </ul>
@@ -1622,27 +1622,17 @@
 <pre><code>&lt;nav&gt;
   &lt;ul&gt;
     &lt;li <span class="example-select">aria-current="page"</span>&gt;
-      &lt;span&gt;<span class="example-select">&lt;span class="visually-hidden"&gt;Текущий пункт:&lt;/span&gt;</span>Шапки, шарфы, варежки&lt;/span&gt;
+      &lt;span&gt;&lt;a href="#"&gt;Шапки, шарфы, варежки&lt;/a&gt;&lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Цены&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}</code></pre>
+</code></pre>
                         </div>
 
                         <p>
-                          Если есть выпадающее меню, добавьте к родительскому пункту атрибут <code class="block-inline">aria-haspopup="true"</code>.
+                          Если есть выпадающее меню, добавьте к родительскому пункту атрибуты <code class="block-inline">aria-haspopup="true"</code> и <code class="block-inline">aria-expanded="false"</code>, значение последнего необходимо изменять при активации родительского элемента.
                         </p>
 
                         <div>Добавьте к элементам меню атрибут role со значениями:</div>
