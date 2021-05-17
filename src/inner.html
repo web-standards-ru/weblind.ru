@@ -715,6 +715,11 @@
                         <h3>Поля ввода</h3>
 
                         <p>
+                          Используйте поля ввода с указанным типом данных, например email, tel, url, number, range, date, или time. Браузеры, которые
+                          их не поддерживают, покажут текстовое поле с <code>type="text"</code>.
+                        </p>
+
+                        <p>
                           Добавьте названия ко всем полям ввода на форме, включая радиокнопки,
                           чекбоксы, выпадающие списки. Название должно быть кратким и отражать назначение поля.
                         </p>
@@ -729,7 +734,7 @@
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
                             <label for="example-1-input-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
-                            <input type="text" id="example-1-input-mail" class="textbox width-40">
+                            <input type="email" id="example-1-input-mail" class="textbox width-40">
                           </div>
 
                           <div class="code-box">
@@ -744,7 +749,7 @@
                             <div class="left width-50">
                               <h5>Хорошо</h5>
 <pre><code>&lt;label <span class="example-select">for="input-mail"</span>&gt;Электронная почта&lt;/label&gt;
-&lt;input type="text" <span class="example-select">id="input-mail"</span>&gt;</code></pre>
+&lt;input type="email" <span class="example-select">id="input-mail"</span>&gt;</code></pre>
                             </div>
 
                             <div class="clear"></div>
@@ -774,7 +779,7 @@
                           Этот класс скрывает лейбл визуально, но его прочтут скринридеры. Обратите внимание, что
                           скринридеры и другие вспомогательные технологии, как и браузеры,
                           скрывают элементы с использованием <code>display: none</code> и <code>visibility: hidden</code>.
-                          Подробнее о скрытом label можно узнать в статье <a href="https://allyjs.io/tutorials/hiding-elements.html"><nobr>Hiding DOM elements</nobr></a>.
+                          Подробнее о скрытом label можно узнать в статье <a href="https://allyjs.io/tutorials/hiding-elements.html" target="_blank"><nobr>Hiding DOM elements</nobr></a>.
                         </p>
 
                         <p>
@@ -787,41 +792,37 @@
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
                             <label for="example-2-input-mail" id="example-2-label-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
-                            <input type="text" id="example-2-input-mail" aria-labelledby="example-2-label-mail" class="textbox width-40">
+                            <input type="email" id="example-2-input-mail" aria-labelledby="example-2-label-mail" class="textbox width-40">
                           </div>
 
                           <div>
 <pre><code>&lt;label for="input-mail" <span class="example-select">id="label-mail"</span>&gt;Электронная почта&lt;/label&gt;
-&lt;input type="text" id="input-mail" <span class="example-select">aria-labelledby="label-mail"</span>&gt;</code></pre>
+&lt;input type="email" id="input-mail" <span class="example-select">aria-labelledby="label-mail"</span>&gt;</code></pre>
                           </div>
                         </div>
 
 
                         <p>
                           Название поля можно указать в атрибутах <code>aria-label</code> или <code>title</code>. Второй метод менее надежный,
-                          название будет видно всем пользователям в виде белой всплывашки при наведении на поле:
+                          название будет видно всем пользователям в виде белой всплывашки при наведении на поле
+                          (размещение текстовой метки в обоих атрибутах одновременно не поощряется):
                         </p>
 
                         <div class="example">
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
-                            <input type="text" id="input-search" class="textbox width-40" aria-label="Поиск по странам">
-                            <a class="button primary">Найти</a>
+                            <input type="search" id="input-search" class="textbox width-40" aria-label="Поиск по странам">
+                            <button class="button primary">Найти</button>
                           </div>
 
                           <div>
                             <div>
-<pre><code>&lt;input type="text" id="input-search" <span class="example-select">aria-label="Поиск по странам"</span>&gt;
-&lt;a class="button primary" &gt;Найти&lt;/a&gt;</code></pre>
+<pre><code>&lt;input type="search" id="input-search" <span class="example-select">aria-label="Поиск по странам"</span>&gt;
+&lt;button class="button primary" &gt;Найти&lt;/button&gt;</code></pre>
                             </div>
                           </div>
                         </div>
 
-
-                        <p>
-                          Используйте поля ввода с указанным типом данных, например email, url, number, range, date, или time. Браузеры, которые
-                          их не поддерживают, покажут текстовое поле с <code>type="text"</code>.
-                        </p>
 
                         <p>
                           Добавьте на форму инструкции по заполнению полей, отметьте обязательные поля, чтобы
@@ -874,7 +875,7 @@
 
                               <p>
                                 <label for="example-4-input-phone" id="example-4-label-phone" class="example-label" >Телефон</label>
-                                <input id="example-4-input-phone" type="email" aria-labelledby="example-4-label-phone" class="textbox width-40" aria-required="true">
+                                <input id="example-4-input-phone" type="tel" aria-labelledby="example-4-label-phone" class="textbox width-40" aria-required="true">
                               </p>
                             </div>
                           </fieldset>
@@ -889,7 +890,7 @@
   &lt;input type="email" id="input-mail" aria-labelledby="label-mail"&gt;
 
   &lt;label for="input-phone" id="label-phone"&gt;Телефон&lt;/label&gt;
-  &lt;input type="email" id="input-phone" aria-labelledby="label-phone"&gt;
+  &lt;input type="tel" id="input-phone" aria-labelledby="label-phone"&gt;
 <span class="example-select">&lt;/fieldset&gt;</span>
 </code></pre>
                         </div>
@@ -915,7 +916,7 @@
 
                               <p>
                                 <label for="example-5-input-phone" id="example-5-label-phone" class="example-label" >Телефон</label>
-                                <input id="example-5-input-phone" type="email" aria-labelledby="example-5-label-phone" class="textbox width-40" aria-required="true">
+                                <input id="example-5-input-phone" type="tel" aria-labelledby="example-5-label-phone" class="textbox width-40" aria-required="true">
                               </p>
                             </div>
                           </div>
@@ -928,7 +929,7 @@
   &lt;input type="email" id="input-mail" aria-labelledby="label-mail"&gt;
 
   &lt;label for="input-phone" id="label-phone"&gt;Телефон&lt;/label&gt;
-  &lt;input type="email" id="input-phone" aria-labelledby="label-phone"&gt;
+  &lt;input type="tel" id="input-phone" aria-labelledby="label-phone"&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                       </div>
@@ -1022,7 +1023,7 @@
 
                           <p>
                             <label for="example-7-input-phone" id="example-7-label-phone" class="example-label" >Телефон</label>
-                            <input id="example-7-input-phone" type="email" aria-labelledby="example-7-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
+                            <input id="example-7-input-phone" type="tel" aria-labelledby="example-7-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
                           </p>
                         </div>
 
@@ -1034,7 +1035,7 @@
 &lt;/p&gt;
 &lt;p&gt;
   &lt;label for="input-phone"&gt;Телефон&lt;/label&gt;
-  &lt;input type="email" id="input-phone" class="textbox" aria-required="true"&gt;
+  &lt;input type="tel" id="input-phone" class="textbox" aria-required="true"&gt;
 &lt;/p&gt;</code></pre>
                         </div>
                       </div>
@@ -1077,7 +1078,7 @@
 
                           <p>
                             <label for="example-8-input-phone" id="example-8-label-phone" class="example-label">Телефон</label>
-                            <input id="example-8-input-phone" type="email" aria-labelledby="example-8-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
+                            <input id="example-8-input-phone" type="tel" aria-labelledby="example-8-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
                           </p>
                         </div>
 
@@ -1378,7 +1379,7 @@
                       <p class="intro-text">
                         Укажите <code>&lt;title&gt;</code> и язык страницы. Добавьте ссылку для перехода к основному
                         контенту. Предоставьте несколько способов поиска содержимого: карта сайта, поиск по сайту.
-                        Не допускайте изменений страницы при фокуcе на элементе или вводе данных.
+                        Не допускайте изменений страницы при фокусе на элементе или вводе данных.
                         Это поможет слепым и слабовидящим пользователям ориентироваться на сайте.
                       </p>
 
@@ -1721,7 +1722,7 @@
 
                           <p>
                             <label for="example-9-input-phone" id="example-9-label-phone" class="example-label">Телефон</label>
-                            <input id="example-9-input-phone" type="email" aria-labelledby="example-9-label-phone" class="textbox width-40" aria-required="true">
+                            <input id="example-9-input-phone" type="tel" aria-labelledby="example-9-label-phone" class="textbox width-40" aria-required="true">
                           </p>
                         </div>
                         <div>
@@ -1729,7 +1730,7 @@
 &lt;input type="email" <nobr>aria-labelledby="label-mail"</nobr> <nobr>aria-required="true"</nobr> <span class="example-select">tabindex="0"</span>&gt;
 
 &lt;label id="label-phone"&gt;Телефон&lt;/label&gt;
-&lt;input type="email" <nobr>aria-labelledby="label-phone"</nobr> <nobr>aria-required="true"</nobr> &gt;</code></pre>
+&lt;input type="tel" <nobr>aria-labelledby="label-phone"</nobr> <nobr>aria-required="true"</nobr> &gt;</code></pre>
                         </div>
                       </div>
 
