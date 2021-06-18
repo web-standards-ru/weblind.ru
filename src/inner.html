@@ -776,24 +776,41 @@
                         </p>
 
                         <p>
-                          Еще один способ связывания поля и подписи — атрибут <code>aria-labelledby</code>.
-                          Он используется как атрибут <code>for</code> для <code>label</code>, значение этого атрибута совпадает
+                          Еще один способ связывания поля и подписи — атрибут <code>aria-labelledby</code>. Такая реализация не поощряется, но возможно в тех случаях, когда использование стандартных лейблов невозможно.
+                          Он используется как абратный атрибут <code>for</code> тега <code>label</code>, значение этого атрибута совпадает
                           со значением id поля:
                         </p>
 
                         <div class="example">
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
-                            <label for="example-2-input-mail" id="example-2-label-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
-                            <input type="text" id="example-2-input-mail" aria-labelledby="example-2-label-mail" class="textbox width-40">
+                            <label for="example-2-input-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
+                            <input type="email" id="example-2-input-mail" class="textbox width-40">
                           </div>
+
+                            <div class="code-box">
+                              <div class="left width-50">
+
+<h5>Плохо</h5>
 
                           <div>
-<pre><code>&lt;label for="input-mail" <span class="example-select">id="label-mail"</span>&gt;Электронная почта&lt;/label&gt;
-&lt;input type="text" id="input-mail" <span class="example-select">aria-labelledby="label-mail"</span>&gt;</code></pre>
+<pre><code>&lt;span id="label-mail"&gt;Электронная почта&lt;/span&gt;
+&lt;input type="email" aria-labelledby="label-mail"&gt;</code></pre>
+                          </div>
+</div>
+
+                              <div class="left width-50">
+
+<h5>Хорошо</h5>
+
+                          <div>
+<pre><code>&lt;label for="input-mail"&gt;Электронная почта&lt;/label&gt;
+&lt;input type="email" id="input-mail"&gt;</code></pre>
                           </div>
                         </div>
-
+                              <div class="clear"></div>
+</div>
+</div>
 
                         <p>
                           Название поля можно указать в атрибутах <code>aria-label</code> или <code>title</code>. Второй метод менее надежный,
@@ -830,13 +847,13 @@
                         <div class="example">
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
-                            <label for="example-3-input-mail" id="example-3-label-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
-                            <input type="email" id="example-3-input-mail" aria-labelledby="example-3-label-mail" class="textbox width-40" aria-required="true" required>
+                            <label for="example-3-input-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
+                            <input type="email" id="example-3-input-mail" class="textbox width-40" aria-required="true" required>
                           </div>
 
                           <div>
-<pre><code>&lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;
-&lt;input <span class="example-select">type="email"</span> id="input-mail" aria-labelledby="label-mail" <span class="example-select">aria-required="true" required</span>&gt;</code></pre>
+<pre><code>&lt;label for="input-mail"&gt;Электронная почта&lt;/label&gt;
+&lt;input <span class="example-select">type="email"</span> id="input-mail" <span class="example-select">aria-required="true" required</span>&gt;</code></pre>
                           </div>
 
                         </div>
