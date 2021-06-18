@@ -356,7 +356,7 @@
                           <div class="example">
                             <h5>Пример</h5>
                             <div class="padding-bottom-20">
-                              <img src="pictures/guide-dog.jpg" class="left xm-width-100" width="175px" style="margin-top: 4px;" alt="Собаки-проводники часто носят на шее колокольчик, чтобы владелец точно знал, где находится собака.">
+                              <img src="pictures/guide-dog.jpg" class="left xm-width-100" width="175px" style="margin-top: 4px;" alt="Собака-проводник с колокольчиком на шее">
 
                               <div class="example-image-text">
                                 <p>Собаки-проводники часто носят
@@ -432,9 +432,10 @@
                     <div id="image-decoration">
                       <h3>Декоративные</h3>
 
-                      <p>Добавляйте декоративные изображения с помощью свойства CSS <code>background-image,</code> чтобы скринридеры
-                        их игнорировали. Если декоративный элемент представлен в виде изображения, например, внутри ссылки, добавьте
-                        к нему пустой <code>alt=""</code> или атрибуты <code>role="presentation"</code>
+                      <p>Добавляйте декоративные изображения с помощью свойства CSS <code>background-image</code>, чтобы скринридеры их игнорировали. Если изображение добавляется на ссылку, обязательно добавьте атрибут <code><nobr>aria-label="Текст для скринридера"</nobr></code>, иначе на скринридер передастся относительный путь ссылки.</p>
+<p>Если декоративный элемент представлен в виде тега <code>&lt;img&gt;</code> вне ссылки, добавьте к изображению атрибут <code><nobr>aria-hidden="true"</nobr></code></p>
+<p>Если изображение находится внутри ссылки, дубль которой присутствует рядом с изображением, добавьте
+                        к самой ссылке атрибуты <code>role="presentation"</code>
                         и <code><nobr>aria-hidden="true"</nobr></code>:
                       </p>
 
@@ -442,7 +443,8 @@
                         <h5>Пример</h5>
 
                         <div class="padding-bottom-20">
-                          <img src="pictures/wave.png" class="width-100" aria-hidden="true" alt="">
+                          <img src="pictures/wave.png" class="width-100" aria-hidden="true">
+
                         </div>
 
                         <div class="code-box">
@@ -457,7 +459,7 @@
                           <div class="left width-50">
                             <div class="item">
                               <h5>Хорошо</h5>
-                              <pre style="white-space: normal">&lt;img src="gradient.png" <span class="example-select">aria-hidden="true" alt=""</span>&gt;</code></pre>
+                              <pre style="white-space: normal">&lt;img src="gradient.png" <span class="example-select">aria-hidden="true"</span>&gt;</code></pre>
                             </div>
                           </div>
 
@@ -713,6 +715,11 @@
                         <h3>Поля ввода</h3>
 
                         <p>
+                          Используйте поля ввода с указанным типом данных, например email, tel, url, number, range, date, или time. Браузеры, которые
+                          их не поддерживают, покажут текстовое поле с <code>type="text"</code>.
+                        </p>
+
+                        <p>
                           Добавьте названия ко всем полям ввода на форме, включая радиокнопки,
                           чекбоксы, выпадающие списки. Название должно быть кратким и отражать назначение поля.
                         </p>
@@ -727,7 +734,7 @@
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
                             <label for="example-1-input-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
-                            <input type="text" id="example-1-input-mail" class="textbox width-40">
+                            <input type="email" id="example-1-input-mail" class="textbox width-40">
                           </div>
 
                           <div class="code-box">
@@ -742,7 +749,7 @@
                             <div class="left width-50">
                               <h5>Хорошо</h5>
 <pre><code>&lt;label <span class="example-select">for="input-mail"</span>&gt;Электронная почта&lt;/label&gt;
-&lt;input type="text" <span class="example-select">id="input-mail"</span>&gt;</code></pre>
+&lt;input type="email" <span class="example-select">id="input-mail"</span>&gt;</code></pre>
                             </div>
 
                             <div class="clear"></div>
@@ -772,54 +779,67 @@
                           Этот класс скрывает лейбл визуально, но его прочтут скринридеры. Обратите внимание, что
                           скринридеры и другие вспомогательные технологии, как и браузеры,
                           скрывают элементы с использованием <code>display: none</code> и <code>visibility: hidden</code>.
-                          Подробнее о скрытом label можно узнать в статье <a href="https://allyjs.io/tutorials/hiding-elements.html"><nobr>Hiding DOM elements</nobr></a>.
+                          Подробнее о скрытом label можно узнать в статье <a href="https://allyjs.io/tutorials/hiding-elements.html" target="_blank"><nobr>Hiding DOM elements</nobr></a>.
                         </p>
 
                         <p>
-                          Еще один способ связывания поля и подписи — атрибут <code>aria-labelledby</code>.
-                          Он используется как атрибут <code>for</code> для <code>label</code>, значение этого атрибута совпадает
+                          Еще один способ связывания поля и подписи — атрибут <code>aria-labelledby</code>. Такая реализация не поощряется, но возможно в тех случаях, когда использование стандартных лейблов невозможно.
+                          Он используется как абратный атрибут <code>for</code> тега <code>label</code>, значение этого атрибута совпадает
                           со значением id поля:
                         </p>
 
                         <div class="example">
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
-                            <label for="example-2-input-mail" id="example-2-label-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
-                            <input type="text" id="example-2-input-mail" aria-labelledby="example-2-label-mail" class="textbox width-40">
+                            <label for="example-2-input-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
+                            <input type="email" id="example-2-input-mail" class="textbox width-40">
                           </div>
+
+                            <div class="code-box">
+                              <div class="left width-50">
+
+<h5>Плохо</h5>
 
                           <div>
-<pre><code>&lt;label for="input-mail" <span class="example-select">id="label-mail"</span>&gt;Электронная почта&lt;/label&gt;
-&lt;input type="text" id="input-mail" <span class="example-select">aria-labelledby="label-mail"</span>&gt;</code></pre>
+<pre><code>&lt;span id="label-mail"&gt;Электронная почта&lt;/span&gt;
+&lt;input type="email" aria-labelledby="label-mail"&gt;</code></pre>
+                          </div>
+</div>
+
+                              <div class="left width-50">
+
+<h5>Хорошо</h5>
+
+                          <div>
+<pre><code>&lt;label for="input-mail"&gt;Электронная почта&lt;/label&gt;
+&lt;input type="email" id="input-mail"&gt;</code></pre>
                           </div>
                         </div>
-
+                              <div class="clear"></div>
+</div>
+</div>
 
                         <p>
                           Название поля можно указать в атрибутах <code>aria-label</code> или <code>title</code>. Второй метод менее надежный,
-                          название будет видно всем пользователям в виде белой всплывашки при наведении на поле:
+                          название будет видно всем пользователям в виде белой всплывашки при наведении на поле
+                          (размещение текстовой метки в обоих атрибутах одновременно не поощряется):
                         </p>
 
                         <div class="example">
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
-                            <input type="text" id="input-search" class="textbox width-40" aria-label="Поиск по странам">
-                            <a class="button primary">Найти</a>
+                            <input type="search" id="input-search" class="textbox width-40" aria-label="Поиск по странам">
+                            <button class="button primary">Найти</button>
                           </div>
 
                           <div>
                             <div>
-<pre><code>&lt;input type="text" id="input-search" <span class="example-select">aria-label="Поиск по странам"</span>&gt;
-&lt;a class="button primary" &gt;Найти&lt;/a&gt;</code></pre>
+<pre><code>&lt;input type="search" id="input-search" <span class="example-select">aria-label="Поиск по странам"</span>&gt;
+&lt;button class="button primary" &gt;Найти&lt;/button&gt;</code></pre>
                             </div>
                           </div>
                         </div>
 
-
-                        <p>
-                          Используйте поля ввода с указанным типом данных, например email, url, number, range, date, или time. Браузеры, которые
-                          их не поддерживают, покажут текстовое поле с <code>type="text"</code>.
-                        </p>
 
                         <p>
                           Добавьте на форму инструкции по заполнению полей, отметьте обязательные поля, чтобы
@@ -830,13 +850,13 @@
                         <div class="example">
                           <h5>Пример</h5>
                           <div class="padding-bottom-20">
-                            <label for="example-3-input-mail" id="example-3-label-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
-                            <input type="email" id="example-3-input-mail" aria-labelledby="example-3-label-mail" class="textbox width-40" aria-required="true" required>
+                            <label for="example-3-input-mail" class="block-inline" style="padding-right: 1rem;">Электронная почта</label>
+                            <input type="email" id="example-3-input-mail" class="textbox width-40" aria-required="true" required>
                           </div>
 
                           <div>
-<pre><code>&lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;
-&lt;input <span class="example-select">type="email"</span> id="input-mail" aria-labelledby="label-mail" <span class="example-select">aria-required="true" required</span>&gt;</code></pre>
+<pre><code>&lt;label for="input-mail"&gt;Электронная почта&lt;/label&gt;
+&lt;input <span class="example-select">type="email"</span> id="input-mail" <span class="example-select">aria-required="true" required</span>&gt;</code></pre>
                           </div>
 
                         </div>
@@ -872,7 +892,7 @@
 
                               <p>
                                 <label for="example-4-input-phone" id="example-4-label-phone" class="example-label" >Телефон</label>
-                                <input id="example-4-input-phone" type="email" aria-labelledby="example-4-label-phone" class="textbox width-40" aria-required="true">
+                                <input id="example-4-input-phone" type="tel" aria-labelledby="example-4-label-phone" class="textbox width-40" aria-required="true">
                               </p>
                             </div>
                           </fieldset>
@@ -887,7 +907,7 @@
   &lt;input type="email" id="input-mail" aria-labelledby="label-mail"&gt;
 
   &lt;label for="input-phone" id="label-phone"&gt;Телефон&lt;/label&gt;
-  &lt;input type="email" id="input-phone" aria-labelledby="label-phone"&gt;
+  &lt;input type="tel" id="input-phone" aria-labelledby="label-phone"&gt;
 <span class="example-select">&lt;/fieldset&gt;</span>
 </code></pre>
                         </div>
@@ -913,7 +933,7 @@
 
                               <p>
                                 <label for="example-5-input-phone" id="example-5-label-phone" class="example-label" >Телефон</label>
-                                <input id="example-5-input-phone" type="email" aria-labelledby="example-5-label-phone" class="textbox width-40" aria-required="true">
+                                <input id="example-5-input-phone" type="tel" aria-labelledby="example-5-label-phone" class="textbox width-40" aria-required="true">
                               </p>
                             </div>
                           </div>
@@ -926,7 +946,7 @@
   &lt;input type="email" id="input-mail" aria-labelledby="label-mail"&gt;
 
   &lt;label for="input-phone" id="label-phone"&gt;Телефон&lt;/label&gt;
-  &lt;input type="email" id="input-phone" aria-labelledby="label-phone"&gt;
+  &lt;input type="tel" id="input-phone" aria-labelledby="label-phone"&gt;
 &lt;/div&gt;</code></pre>
                         </div>
                       </div>
@@ -1020,7 +1040,7 @@
 
                           <p>
                             <label for="example-7-input-phone" id="example-7-label-phone" class="example-label" >Телефон</label>
-                            <input id="example-7-input-phone" type="email" aria-labelledby="example-7-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
+                            <input id="example-7-input-phone" type="tel" aria-labelledby="example-7-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
                           </p>
                         </div>
 
@@ -1032,7 +1052,7 @@
 &lt;/p&gt;
 &lt;p&gt;
   &lt;label for="input-phone"&gt;Телефон&lt;/label&gt;
-  &lt;input type="email" id="input-phone" class="textbox" aria-required="true"&gt;
+  &lt;input type="tel" id="input-phone" class="textbox" aria-required="true"&gt;
 &lt;/p&gt;</code></pre>
                         </div>
                       </div>
@@ -1075,7 +1095,7 @@
 
                           <p>
                             <label for="example-8-input-phone" id="example-8-label-phone" class="example-label">Телефон</label>
-                            <input id="example-8-input-phone" type="email" aria-labelledby="example-8-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
+                            <input id="example-8-input-phone" type="tel" aria-labelledby="example-8-label-phone" class="textbox width-40" aria-required="true" value="+79006538888">
                           </p>
                         </div>
 
@@ -1376,7 +1396,7 @@
                       <p class="intro-text">
                         Укажите <code>&lt;title&gt;</code> и язык страницы. Добавьте ссылку для перехода к основному
                         контенту. Предоставьте несколько способов поиска содержимого: карта сайта, поиск по сайту.
-                        Не допускайте изменений страницы при фокуcе на элементе или вводе данных.
+                        Не допускайте изменений страницы при фокусе на элементе или вводе данных.
                         Это поможет слепым и слабовидящим пользователям ориентироваться на сайте.
                       </p>
 
@@ -1514,11 +1534,11 @@
                             рекламы, архивных записей;
                           </li>
                           <li>
-                            <code>&lt;footer&gt;</code> для нижнего блока страницы с информацией об авторе статьи, данные о копирайте
+                            <code>&lt;footer&gt;</code> для нижнего блока страницы с информацией об авторе статьи, данными о копирайте
                             и т. д.
                           </li>
                           <li>
-                            <code>&lt;figure&gt;</code> для группировки элементов, например, картинку и текст;
+                            <code>&lt;figure&gt;</code> для группировки элементов, например, картинки и текста;
                           </li>
                           <li>
                             <code>&lt;main&gt;</code> для основного содержимого страницы.
@@ -1637,6 +1657,16 @@
                           Если есть выпадающее меню, добавьте к родительскому пункту атрибуты <code class="block-inline">aria-haspopup="true"</code> и <code class="block-inline">aria-expanded="false"</code>, значение последнего необходимо изменять при активации родительского элемента.
                         </p>
 
+<p>Старайтесь не назначать кликабельный ссылки на родительские элементы всплывающих подменю, так как вам придется обеспечить их сворачивание/разворачивание по нажатию с клавиатуры, а не только при наведении мыши. В противном случае пользователи без мыши не смогут перейти по ссылкам в таких элементах.</p>
+
+<p>Как реализовать такие подменю с учетом доступности показано в первом примере руководства WAI-ARIA <a href="https://www.w3.org/WAI/tutorials/menus/flyout/" target="_blank">на этой странице.</a></p>
+
+<div>По возможности избегайте использования ролей menubar, menu и menuitem.</div>
+
+<p>Использование названных выше значений атрибута role оправдано только в том случае, если меню на сайте постоянно развернуто, и состоит только из вертикальных подменю. При такой реализации вам потребуется управлять фокусом скринридера самостоятельно.</p>
+
+<p>Если у вас высоконагруженное меню, следующий блок информации для вас.</p>
+
                         <div>Добавьте к элементам меню атрибут role со значениями:</div>
 
                         <ul class="list-none padding-bottom-10">
@@ -1651,6 +1681,8 @@
                           атрибут <code>tabindex="-1"</code>. Первому элементу главного меню («Шапки, шарфы,
                           варежки» в примере выше) добавьте значение <code>tabindex="0"</code>.
                         </p>
+
+<p>Более подробно о том, какое поведение при нажатии определенных клавиш вам нужно будет эмулировать, описано в <a href="https://www.w3.org/WAI/tutorials/menus/application-menus/" target="_blank">данной главе руководства.</a></p>
                       </div>
                     </div>
 
@@ -1692,7 +1724,7 @@
                         правильную последовательность содержимого на странице и добавьте визуальное отображение
                         фокуса на активных элементах. Переход на следующий элемент — одно нажатие
                         на клавишу Tab, на предыдущий — Shift+Tab. Если программно заданы другие
-                        клавиши, укажите это в начале сайте.
+                        клавиши, укажите это в начале сайта.
                       </p>
 
                       <p>
@@ -1719,7 +1751,7 @@
 
                           <p>
                             <label for="example-9-input-phone" id="example-9-label-phone" class="example-label">Телефон</label>
-                            <input id="example-9-input-phone" type="email" aria-labelledby="example-9-label-phone" class="textbox width-40" aria-required="true">
+                            <input id="example-9-input-phone" type="tel" aria-labelledby="example-9-label-phone" class="textbox width-40" aria-required="true">
                           </p>
                         </div>
                         <div>
@@ -1727,7 +1759,7 @@
 &lt;input type="email" <nobr>aria-labelledby="label-mail"</nobr> <nobr>aria-required="true"</nobr> <span class="example-select">tabindex="0"</span>&gt;
 
 &lt;label id="label-phone"&gt;Телефон&lt;/label&gt;
-&lt;input type="email" <nobr>aria-labelledby="label-phone"</nobr> <nobr>aria-required="true"</nobr> &gt;</code></pre>
+&lt;input type="tel" <nobr>aria-labelledby="label-phone"</nobr> <nobr>aria-required="true"</nobr> &gt;</code></pre>
                         </div>
                       </div>
 
