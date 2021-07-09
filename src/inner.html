@@ -356,7 +356,7 @@
                           <div class="example">
                             <h5>Пример</h5>
                             <div class="padding-bottom-20">
-                              <img src="pictures/guide-dog.jpg" class="left xm-width-100" width="175px" style="margin-top: 4px;" alt="Собаки-проводники часто носят на шее колокольчик, чтобы владелец точно знал, где находится собака.">
+                              <img src="pictures/guide-dog.jpg" class="left xm-width-100" width="175px" style="margin-top: 4px;" alt="Собака-проводник с колокольчиком на шее">
 
                               <div class="example-image-text">
                                 <p>Собаки-проводники часто носят
@@ -432,9 +432,10 @@
                     <div id="image-decoration">
                       <h3>Декоративные</h3>
 
-                      <p>Добавляйте декоративные изображения с помощью свойства CSS <code>background-image,</code> чтобы скринридеры
-                        их игнорировали. Если декоративный элемент представлен в виде изображения, например, внутри ссылки, добавьте
-                        к нему пустой <code>alt=""</code> или атрибуты <code>role="presentation"</code>
+                      <p>Добавляйте декоративные изображения с помощью свойства CSS <code>background-image</code>, чтобы скринридеры их игнорировали. Если изображение добавляется на ссылку, обязательно добавьте атрибут <code><nobr>aria-label="Текст для скринридера"</nobr></code>, иначе на скринридер передастся относительный путь ссылки.</p>
+<p>Если декоративный элемент представлен в виде тега <code>&lt;img&gt;</code> вне ссылки, добавьте к изображению атрибут <code><nobr>aria-hidden="true"</nobr></code></p>
+<p>Если изображение находится внутри ссылки, дубль которой присутствует рядом с изображением, добавьте
+                        к самой ссылке атрибуты <code>role="presentation"</code>
                         и <code><nobr>aria-hidden="true"</nobr></code>:
                       </p>
 
@@ -442,7 +443,8 @@
                         <h5>Пример</h5>
 
                         <div class="padding-bottom-20">
-                          <img src="pictures/wave.png" class="width-100" aria-hidden="true" alt="">
+                          <img src="pictures/wave.png" class="width-100" aria-hidden="true">
+
                         </div>
 
                         <div class="code-box">
@@ -457,7 +459,7 @@
                           <div class="left width-50">
                             <div class="item">
                               <h5>Хорошо</h5>
-                              <pre style="white-space: normal">&lt;img src="gradient.png" <span class="example-select">aria-hidden="true" alt=""</span>&gt;</code></pre>
+                              <pre style="white-space: normal">&lt;img src="gradient.png" <span class="example-select">aria-hidden="true"</span>&gt;</code></pre>
                             </div>
                           </div>
 
