@@ -81,7 +81,8 @@ gulp.task('copy', () => {
       'src/images/*',
       'src/pictures/*'
     ], {
-      base: 'src'
+      base: 'src',
+      encoding: false
     })
     .pipe(gulp.dest('dist'))
     .pipe(sync.stream({
